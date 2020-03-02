@@ -22,10 +22,10 @@
                     <h2>Connexion</h2>
                     <p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>
                     <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Votre Email"/>
+                        <input type="email" class="form-input" name="email" id="mail" placeholder="Votre Email"/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-input" name="password" id="password" placeholder="Votre mot de passe"/>
+                        <input type="password" class="form-input" name="mdp" id="password" placeholder="Votre mot de passe"/>
                         <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                     </div>
                     <div class="form-group">
