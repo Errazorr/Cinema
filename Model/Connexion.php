@@ -25,7 +25,7 @@ class methode{
     else{
       echo '<body onLoad="alert(\'Identifiant ou Mot de passe incorrect\')">';
 
-      //echo '<meta http-equiv="refresh" content="0;URL=../View/Connexion.php">';
+      echo '<meta http-equiv="refresh" content="0;URL=../View/Connexion.php">';
     }
   }
 }
