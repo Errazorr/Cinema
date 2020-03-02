@@ -52,7 +52,7 @@
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/inscription.php">inscription</a></li>
+                            <li><a href="View/Connexion.php">Connexion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -341,19 +341,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="member-item set-bg" data-setbg="img/member/member-1.jpg">
+                    <div class="member-item set-bg" data-setbg="img/joker.jpg">
                         <div class="mi-text">
                             <p>Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
                                 incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                             <div class="mt-title">
-                                <h4>Jacob Gomez</h4>
-                                <span>Designer</span>
-                            </div>
-                            <div class="mt-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <h4>Joker</h4>
+                                <span>Action</span>
                             </div>
                         </div>
                     </div>
