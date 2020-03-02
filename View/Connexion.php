@@ -18,11 +18,10 @@
 
         <div class="container">
             <div class="signup-content">
-                <form method="POST" action="chjfvezukj.php" id="signup-form" class="signup-form">
+                <form method="POST" action="../Traitement/Connexion.php" id="signup-form" class="signup-form">
                     <h2>Connexion</h2>
-                    <p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>
                     <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="mail" placeholder="Votre Email"/>
+                        <input type="email" class="form-input" name="mail" id="mail" placeholder="Votre Email"/>
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-input" name="mdp" id="password" placeholder="Votre mot de passe"/>
