@@ -10,22 +10,22 @@ input[type=radio] { @include appearance( radio ); }
 input:-webkit-autofill {
     @include box-shadow(0 0 0 30px transparent inset);
     background-color: transparent !important;
-} 
+}
 img { max-width: 100%; height: auto; }
 figure { margin: 0; }
-p { 
+p {
     margin-bottom: 32px;
     margin-top: 0px;
     font-weight: 400;
     span {
-        font-weight: bold; 
+        font-weight: bold;
     }
 }
-h2 { 
-    line-height: 1.2; 
-    margin: 0; 
+h2 {
+    line-height: 1.2;
+    margin: 0;
     padding: 0;
-    font-weight: bold; 
+    font-weight: bold;
     color: #fff;
     font-family: 'Poppins';
     font-size: 36px;
@@ -46,15 +46,15 @@ body {
     // padding: 150px 0;
 }
 .main {
-    
+
     position: relative;
 }
 .container {
     margin-top: 120px;
     margin-bottom: 70px;
     width: 1123px;
-    padding-top: 135px;
-    padding-bottom: 115px;
+    padding-top: 290px;
+    padding-bottom: 290px;
     // padding: 150px 0;
     // background: rgba(177,135,87, 0.75);
     background-image: url('../images/container-bg.png');
@@ -63,4 +63,3 @@ body {
     background-position: center center;
     overflow: hidden;
 }
-

@@ -44,7 +44,7 @@
                     <div class="main-menu mobile-menu">
                         <ul>
                             <li class="active"><a href="index.php">Accueil</a></li>
-                            <li><a href="View/Reservation.php">Reservation</a></li>
+                            <li><a href="View/reservation.php">Reservation</a></li>
                             <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveauté.php">Nouveauté</a></li>

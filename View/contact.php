@@ -14,13 +14,13 @@
         rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 
 <body>
@@ -43,18 +43,16 @@
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./gallery.html">Gallery</a>
+                            <li class="active"><a href="../index.php">Accueil</a></li>
+                            <li><a href="reservation.php">Reservation</a></li>
+                            <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Naoh</a></li>
-                                    <li><a href="#">Padis</a></li>
-                                    <li><a href="#">Jacob</a></li>
-                                    <li><a href="#">Gomez</a></li>
+                                    <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                    <li><a href="View/Prochainement.php">Prochainement</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="./contact.html">Contact</a></li>
+                            <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/Connexion.php">Connexion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -211,13 +209,13 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/mixitup.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
