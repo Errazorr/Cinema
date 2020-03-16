@@ -114,8 +114,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Services</span>
-                        <h2>Best Services Save The World</h2>
+                        <span>Nos services</span>
+                        <h2>Nous avons les meilleurs services au monde</h2>
                     </div>
                 </div>
             </div>
@@ -123,22 +123,22 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <img src="img/services/service-1.png" alt="">
-                        <h4>Modern Design</h4>
-                        <p>Brook embraces a modern look with various enhanced pre-defined page elements.</p>
+                        <h4>Nos salles</h4>
+                        <p>Tout nos cinéma sont équiper de la dernière technologie la 4DX.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <img src="img/services/service-2.png" alt="">
-                        <h4>Content</h4>
-                        <p>Brook embraces a modern look with various enhanced pre-defined page elements.</p>
+                        <h4>Offre attractive</h4>
+                        <p>En effet chez nous on ne rigole pas 1 place acheter = 1 place offert.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <img src="img/services/service-3.png" alt="">
-                        <h4>Make Up</h4>
-                        <p>Brook embraces a modern look with various enhanced pre-defined page elements.</p>
+                        <h4>On prend soin de vous</h4>
+                        <p>Avec notre offre de fidélité vous permettant de gagner des cadeaux.</p>
                     </div>
                 </div>
             </div>
@@ -334,8 +334,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Team</span>
-                        <h2>Top Designers</h2>
+                        <span>Nos film</span>
+                        <h2>Les films du moment</h2>
                     </div>
                 </div>
             </div>
@@ -343,8 +343,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="member-item set-bg" data-setbg="img/joker.jpg">
                         <div class="mi-text">
-                            <p>Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Dans les années 1980, à Gotham City, Arthur Fleck, un comédien de stand-up raté est agressé alors qu'il ère dans les rues de la ville déguisé en clown. Méprisé de tous et bafoué, il bascule peu à peu dans la folie pour devenir le Joker, un dangereux tueur psychotique.</p>
                             <div class="mt-title">
                                 <h4>Joker</h4>
                                 <span>Action</span>
@@ -353,37 +352,23 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="member-item set-bg" data-setbg="img/member/member-2.jpg">
+                    <div class="member-item set-bg" data-setbg="img/pinocchio.jpg">
                         <div class="mi-text">
-                            <p>Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Pour atténuer sa solitude, Geppetto construit une marionnette en bois en guise de fils. Par magie, le pantin prend vie et le jeune Pinocchio n'a plus qu'un seul but dans sa vie : devenir un véritable petit garçon. Cependant, grandir va s'avérer être une entreprise difficile.</p>
                             <div class="mt-title">
-                                <h4>Jacob Gomez</h4>
-                                <span>Designer</span>
-                            </div>
-                            <div class="mt-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <h4>Pinocchio</h4>
+                                <span>Aventure</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="member-item set-bg" data-setbg="img/member/member-3.jpg">
+                    <div class="member-item set-bg" data-setbg="img/Grudge.jpg">
                         <div class="mi-text">
-                            <p>Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>The Grudge ou Rage Meurtrière au Québec, est un film d'horreur américain réalisé par Nicolas Pesce et sorti en 2020. Il s'agit d'une suite à la trilogie américaine initiée par Sam Raimi, se déroulant pendant et après les événements du premier film, sorti en 2004, et de ses suites, sorties en 2006 et 2009.</p>
                             <div class="mt-title">
-                                <h4>Jacob Gomez</h4>
-                                <span>Designer</span>
-                            </div>
-                            <div class="mt-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <h4>The Grudge</h4>
+                                <span>Horreur</span>
                             </div>
                         </div>
                     </div>
