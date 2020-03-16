@@ -96,7 +96,7 @@
                         </div>
                         <p class="f-para">Ce cinéma sur 5 étages a été créé par M.Bhujun et M.Goncalves en collaboration.
                           Notre cinéma vous proposera les films les plus récents et attendus! </p>
-                        <a href="#" class="primary-btn">Read More</a>
+                        <a href="#" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                             <span>Number Speaks</span>
                             <h2>We have a lot of <br />experience</h2>
                         </div>
-                        <a href="#" class="primary-btn">Read More</a>
+                        <a href="#" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
