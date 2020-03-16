@@ -68,11 +68,10 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="hs-text">
-                        <span>Office Fashion</span>
-                        <h2>New Fashion</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="#" class="primary-btn">Read More</a>
+                        <span>Bienvenue au</span>
+                        <h2>Palais du cinéma!</h2>
+                        <p>Un cinéma impressionnant sur 5 étages!*</p>
+                        <a href="#" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -92,15 +91,12 @@
                 <div class="col-lg-6">
                     <div class="as-text">
                         <div class="section-title">
-                            <span>About us</span>
-                            <h2>About Story</h2>
+                            <span>A propos de nous</span>
+                            <h2>Notre histoire</h2>
                         </div>
-                        <p class="f-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p class="s-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="#" class="primary-btn">Read More</a>
+                        <p class="f-para">Ce cinéma sur 5 étages a été créé par M.Bhujun et M.Goncalves en collaboration.
+                          Notre cinéma vous proposera les films les plus récents et attendus!</p>
+                        <a href="#" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -334,8 +330,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Team</span>
-                        <h2>Top Designers</h2>
+                        <span>Nos films</span>
+                        <h2>Les meilleurs films en ce moment</h2>
                     </div>
                 </div>
             </div>
@@ -343,8 +339,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="member-item set-bg" data-setbg="img/joker.jpg">
                         <div class="mi-text">
-                            <p>Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Dans les années 1980, à Gotham City, Arthur Fleck, un comédien de stand-up raté est agressé alors qu'il ère dans les rues de la ville déguisé en clown. Méprisé de tous et bafoué, il bascule peu à peu dans la folie pour devenir le Joker, un dangereux tueur psychotique</p>
                             <div class="mt-title">
                                 <h4>Joker</h4>
                                 <span>Action</span>
