@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="contact-text">
-                        <h4>Contacts Us</h4>
+                        <h4>Nous rejoindre !</h4>
                         <div class="ct-item">
                             <div class="ci-icon">
                                 <span class="ti-location-pin"></span>
@@ -84,8 +84,8 @@
                             <div class="ci-text">
                                 <ul>
                                     <li>
-                                        <span>Our Location</span>
-                                        60-49 Road 11378 New York
+                                        <span>Localisation</span>
+                                        Champ de Mars, Avenue de la Bourdonnais, 75007 Paris
                                     </li>
                                 </ul>
                             </div>
@@ -97,8 +97,8 @@
                             <div class="ci-text">
                                 <ul>
                                     <li>
-                                        <span>Phone:</span>
-                                        +65 11.188.888
+                                        <span>Telephone</span>
+                                        +33 07 00 00 00 00
                                     </li>
                                 </ul>
                             </div>
@@ -111,7 +111,7 @@
                                 <ul>
                                     <li>
                                         <span>Mail</span>
-                                        hellocolorlib@gmail.com
+                                        Cine_info@gmail.com
                                     </li>
                                 </ul>
                             </div>
@@ -120,18 +120,18 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="contact-option">
-                        <h4>Leave A Comment</h4>
-                        <form action="#" class="comment-form contact-form">
+                        <h4>Nous contacter !</h4>
+                        <form action="../Manager/Contact.php" method="post" class="comment-form contact-form">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" name="nom" placeholder="nom">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" name="mail" placeholder="mail">
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Messages"></textarea>
-                                    <button type="submit" class="site-btn">Send Message</button>
+                                      <input type="text" name="message" placeholder="message">
+                                    <button type="submit" class="site-btn">Envoyer</button>
                                 </div>
                             </div>
                         </form>
