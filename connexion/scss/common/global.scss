@@ -60,6 +60,5 @@ body {
     background-image: url('../images/container-bg.png');
     background-repeat: no-repeat;
     @include background-size(cover);
-    background-position: center center;
     overflow: hidden;
 }

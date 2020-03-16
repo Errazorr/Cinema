@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('user.php');
+require_once('../Model/User.php');
 
 class methode{
   public function connexion(user $connexion){

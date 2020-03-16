@@ -1,7 +1,7 @@
 <?php
 
 require '../Model/User.php';
-require '../Model/Connexion.php';
+require '../Manager/Connexion.php';
 
 if (is_null($_POST['mail'] OR is_null($_POST['mdp']))){
   echo '<body onLoad="alert(\'Veuillez remplir les zones vides\')">';
