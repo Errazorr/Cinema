@@ -68,10 +68,9 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="hs-text">
-                        <span>Office Fashion</span>
-                        <h2>New Fashion</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <span>Bienvenue au</span>
+                        <h2>Palais du cinéma !</h2>
+                        <p>Un cinéma impressionnant sur 5 étages !</p>
                         <a href="#" class="primary-btn">Read More</a>
                     </div>
                 </div>
@@ -92,14 +91,11 @@
                 <div class="col-lg-6">
                     <div class="as-text">
                         <div class="section-title">
-                            <span>About us</span>
-                            <h2>About Story</h2>
+                            <span>A propos de nous</span>
+                            <h2>Notre histoire</h2>
                         </div>
-                        <p class="f-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p class="s-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="f-para">Ce cinéma sur 5 étages a été créé par M.Bhujun et M.Goncalves en collaboration.
+                          Notre cinéma vous proposera les films les plus récents et attendus!</p>
                         <a href="#" class="primary-btn">Read More</a>
                     </div>
                 </div>
