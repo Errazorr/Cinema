@@ -40,7 +40,7 @@ class methode{
     }
 
     $req = $bdd->prepare('SELECT * FROM compte WHERE mail=?');
-    $req->execute(array($connexion->getMail()));
+    $req->execute(array($inscription->getMail()));
     $donnees= $req->fetch();
 
     if ($donnees) {
@@ -54,6 +54,7 @@ class methode{
       $req->execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getMail(), $inscription->getTel(), md5($inscription->getMdp()), 'client'));
       $_SESSION['nom'] = $inscription->getNom();
       $_SESSION['prenom'] = $inscription->getPrenom();
+      header('Location: ../Index.php');
     }
 
   }
