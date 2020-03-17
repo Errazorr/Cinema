@@ -469,10 +469,10 @@
                     <div class="footer-widget fw-links">
                         <h5>informations</h5>
                         <ul>
-                            <li><a href="reservation.php">Reservation</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="Connexion.php">Connexion</a></li>
-                            <li><a href="Nouveaute.php">Nouveauté</a></li>
+                            <li><a href="View/reservation.php">Reservation</a></li>
+                            <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/Connexion.php">Connexion</a></li>
+                            <li><a href="View/Nouveaute.php">Nouveauté</a></li>
                         </ul>
                     </div>
                 </div>
