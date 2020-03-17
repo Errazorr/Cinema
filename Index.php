@@ -56,18 +56,13 @@ $role= $req->fetch();
                 </div>
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="index.php">Accueil</a></li>
+                      <ul>
 
-                            <?php if (isset($_SESSION['mail'])) {
-                              if ($role == "admin") { ?>
-                              <li><a href="View/voir_reservation.php">Reservations</a></li>
-                            <?php }
+                        <?php
+                        if (isset($_SESSION['mail'])) {
+                          if ($role == "admin") { ?>
 
-                            else {?>
-                              <li><a href="View/reservation.php">Reservation</a></li>
-                              <?php	}  ?>
-                              
+                            <li class="active"><a href="../index.php">Accueil</a></li>
                             <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveauté.php">Nouveauté</a></li>
@@ -75,18 +70,38 @@ $role= $req->fetch();
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/compte_admin.php">Mon compte</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
+                          <?php }
 
-                            <?php if (isset($_SESSION['mail'])) { ?>
+                          else {?>
+                            <li class="active"><a href="../index.php">Accueil</a></li>
+                            <li><a href="View/reservation.php">Réservation</a></li>
+                            <li><a href="View/Film.php">Film & évènement</a>
+                                <ul class="dropdown">
+                                    <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                    <li><a href="View/Prochainement.php">Prochainement</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/compte_client.php">Mon compte</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
+                        <?php }
 
-                              <li><a href="View/Connexion.php">Connexion</a></li>
+                        else {?>
+                          <li class="active"><a href="../index.php">Accueil</a></li>
+                          <li><a href="View/Film.php">Film & évènement</a>
+                              <ul class="dropdown">
+                                  <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                  <li><a href="View/Prochainement.php">Prochainement</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="View/contact.php">Contact</a></li>
+                          <li><a href="View/Connexion.php">Connexion</a></li>
 
-                            <?php }
+                        <?php	}  ?>
 
-														else {?>
-
-                            <li><a href="View/Connexion.php">Déconnexion</a></li>
-                          <?php	}  ?>
-                        </ul>
+                      </ul>
                     </div>
                 </div>
             </div>
