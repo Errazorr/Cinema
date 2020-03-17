@@ -40,7 +40,7 @@ class methode{
     }
 
     $req = $bdd->prepare('SELECT * FROM compte WHERE mail=?');
-    $req->execute(array($connexion->getMail()));
+    $req->execute(array($inscription->getMail()));
     $donnees= $req->fetch();
 
     if ($donnees) {
