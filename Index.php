@@ -120,14 +120,14 @@
                     <div class="service-item">
                         <img src="img/services/service-1.png" alt="">
                         <h4>Nos salles</h4>
-                        <p>Tout nos cinéma sont équiper de la dernière technologie la 4DX.</p>
+                        <p>Toutes nos salles sont équipées de la dernière technologie : la 4DX.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <img src="img/services/service-2.png" alt="">
                         <h4>Offre attractive</h4>
-                        <p>En effet chez nous on ne rigole pas 1 place acheter = 1 place offert.</p>
+                        <p>En effet, chez nous on ne rigole pas, 1 place achetée = 1 place offerte.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -149,7 +149,7 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <span>Les films</span>
-                        <h2>du mois</h2>
+                        <h2>DU MOIS</h2>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                     <div class="counter-text">
                         <div class="section-title">
                             <span>Nos cinémas</span>
-                            <h2>Nous avons beaucoup de cinéma<br/>en France</h2>
+                            <h2>Nous avons beaucoup de cinémas<br/>Principalement en France</h2>
                         </div>
                         <a href="View/contact.php" class="primary-btn">En savoir plus</a>
                     </div>
@@ -216,8 +216,8 @@
                             350
                         </div>
                         <div class="ci-text">
-                            <h4>Films projetter</h4>
-                            <p>C'est le nombres de projection de film par jour afficher dans notre cinéma à Paris.</p>
+                            <h4>Films projettés</h4>
+                            <p>C'est le nombre de films affichés dans notre cinéma à Paris par jour.</p>
                         </div>
                     </div>
                     <div class="counter-item">
@@ -225,8 +225,8 @@
                             132
                         </div>
                         <div class="ci-text">
-                            <h4>évènements</h4>
-                            <p>C'est le nombres d'évenements organiser depuis le 1er janvier </p>
+                            <h4>Évènements</h4>
+                            <p>C'est le nombres d'évènements organisés depuis le 1er janvier </p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                                 <h4>Travis Crawford</h4>
                                 <span>Employé chez palais du cinéma</span>
                             </div>
-                            <p>Chaque jour c'est un plaisir de venir travailer dans cette arêne qui est le palais du cinéma.</p>
+                            <p>Chaque jour c'est un plaisir de venir travailer dans cette arêne qu'est le Palais du cinéma.</p>
                         </div>
                     </div>
                 </div>
@@ -261,39 +261,9 @@
                         <div class="ti-text">
                             <div class="ti-title">
                                 <h4>Noah Padilla</h4>
-                                <span>De passange a Paris</span>
+                                <span>De passage à Paris</span>
                             </div>
-                            <p>J'ai décider d'allée au palais du cinéma avec des amis et je n'est ne regrette pas, cinéma tres agréable, confortable.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="testimonial-item">
-                        <div class="ti-pic">
-                            <img src="img/testimonial/testimonial-3.jpg" alt="">
-                        </div>
-                        <div class="ti-text">
-                            <div class="ti-title">
-                                <h4>Noah Padilla</h4>
-                                <span>Designer</span>
-                            </div>
-                            <p>Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                magnam aliquam quaerat voluptatem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="testimonial-item">
-                        <div class="ti-pic">
-                            <img src="img/testimonial/testimonial-4.jpg" alt="">
-                        </div>
-                        <div class="ti-text">
-                            <div class="ti-title">
-                                <h4>Noah Padilla</h4>
-                                <span>Designer</span>
-                            </div>
-                            <p>Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                magnam aliquam quaerat voluptatem.</p>
+                            <p>J'ai décidé d'aller au Palais du cinéma avec des amis et je ne le regrette pas, le cinéma est très agréable et confortable.</p>
                         </div>
                     </div>
                 </div>
@@ -309,7 +279,7 @@
                 <div class="col-lg-10 m-auto">
                     <div class="ctc-text">
                         <h2>La fête du cinéma</h2>
-                        <p>Pour cette année la fête du cinéma aura lieu du 28 juin au 1er juillet 2020. En attendant, place au Printemps
+                        <p>Pour cette année, la fête du cinéma aura lieu du 28 juin au 1er juillet 2020. En attendant, place au Printemps
                           du Cinéma du 29 au 31 mars !</p>
                         <a href="http://www.feteducinema.com/" class="primary-btn ctc-btn">En savoir plus !</a>
                     </div>
@@ -454,7 +424,7 @@
                         </div>
                         <ul>
                             <li>Adresse: Rue de Rivoli, 75001 Paris</li>
-                            <li>Phone: +33 07 00 00 00 00</li>
+                            <li>Phone: +33 7 00 00 00 00</li>
                             <li>Email: Palais_du_cinema@gmail.com</li>
                         </ul>
                         <div class="fo-social">
@@ -467,12 +437,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget fw-links">
-                        <h5>informations</h5>
+                        <h5>Informations</h5>
                         <ul>
-                            <li><a href="reservation.php">Reservation</a></li>
+                            <li><a href="reservation.php">Réservation</a></li>
                             <li><a href="contact.php">Contact</a></li>
                             <li><a href="Connexion.php">Connexion</a></li>
-                            <li><a href="Nouveaute.php">Nouveauté</a></li>
+                            <li><a href="Nouveaute.php">Nouveautés</a></li>
                         </ul>
                     </div>
                 </div>
@@ -501,7 +471,7 @@
                 </div>
             </div>
             <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est fait avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
         </div>
     </section>
