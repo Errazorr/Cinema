@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
+<?php
+session_start();
+
+try{
+  $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+}
+catch (Exception $e){
+  die('Erreur:'.$e->getMessage());
+}
+$req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
+$req->execute(array($_SESSION['mail']));
+$role= $req->fetch();
+ ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Hazze Template">
@@ -42,9 +56,13 @@
                 </div>
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="index.php">Accueil</a></li>
-                            <li><a href="View/reservation.php">Reservation</a></li>
+                      <ul>
+
+                        <?php
+                        if (isset($_SESSION['mail'])) {
+                          if ($role == "admin") { ?>
+
+                            <li class="active"><a href="../index.php">Accueil</a></li>
                             <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveauté.php">Nouveauté</a></li>
@@ -52,8 +70,38 @@
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/Connexion.php">Connexion</a></li>
-                        </ul>
+                            <li><a href="View/compte_admin.php">Mon compte</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
+                          <?php }
+
+                          else {?>
+                            <li class="active"><a href="../index.php">Accueil</a></li>
+                            <li><a href="View/reservation.php">Réservation</a></li>
+                            <li><a href="View/Film.php">Film & évènement</a>
+                                <ul class="dropdown">
+                                    <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                    <li><a href="View/Prochainement.php">Prochainement</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/compte_client.php">Mon compte</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
+                        <?php }
+
+                        else {?>
+                          <li class="active"><a href="../index.php">Accueil</a></li>
+                          <li><a href="View/Film.php">Film & évènement</a>
+                              <ul class="dropdown">
+                                  <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                  <li><a href="View/Prochainement.php">Prochainement</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="View/contact.php">Contact</a></li>
+                          <li><a href="View/Connexion.php">Connexion</a></li>
+
+                        <?php	}  ?>
+
+                      </ul>
                     </div>
                 </div>
             </div>
@@ -439,10 +487,17 @@
                     <div class="footer-widget fw-links">
                         <h5>Informations</h5>
                         <ul>
+<<<<<<< HEAD
                             <li><a href="View/reservation.php">Reservation</a></li>
                             <li><a href="View/contact.php">Contact</a></li>
                             <li><a href="View/Connexion.php">Connexion</a></li>
                             <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+=======
+                            <li><a href="reservation.php">Réservation</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="Connexion.php">Connexion</a></li>
+                            <li><a href="Nouveaute.php">Nouveautés</a></li>
+>>>>>>> a5deab404e5ccde72a78c2c5ddd1a67dc0366360
                         </ul>
                     </div>
                 </div>
