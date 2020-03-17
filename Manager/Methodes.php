@@ -54,6 +54,7 @@ class methode{
       $req->execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getMail(), $inscription->getTel(), md5($inscription->getMdp()), 'client'));
       $_SESSION['nom'] = $inscription->getNom();
       $_SESSION['prenom'] = $inscription->getPrenom();
+      header('Location: ../Index.php');
     }
 
   }
