@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
+<?php
+session_start();
+
+try{
+  $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+}
+catch (Exception $e){
+  die('Erreur:'.$e->getMessage());
+}
+$req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
+$req->execute(array($_SESSION['mail']));
+$role= $req->fetch();
+ ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Hazze Template">
@@ -44,7 +58,16 @@
                     <div class="main-menu mobile-menu">
                         <ul>
                             <li class="active"><a href="index.php">Accueil</a></li>
-                            <li><a href="View/reservation.php">Reservation</a></li>
+
+                            <?php if (isset($_SESSION['mail'])) {
+                              if ($role == "admin") { ?>
+                              <li><a href="View/voir_reservation.php">Reservations</a></li>
+                            <?php }
+
+                            else {?>
+                              <li><a href="View/reservation.php">Reservation</a></li>
+                              <?php	}  ?>
+                              
                             <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveauté.php">Nouveauté</a></li>
@@ -52,7 +75,17 @@
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/Connexion.php">Connexion</a></li>
+
+                            <?php if (isset($_SESSION['mail'])) { ?>
+
+                              <li><a href="View/Connexion.php">Connexion</a></li>
+
+                            <?php }
+
+														else {?>
+
+                            <li><a href="View/Connexion.php">Déconnexion</a></li>
+                          <?php	}  ?>
                         </ul>
                     </div>
                 </div>
