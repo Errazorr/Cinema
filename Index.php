@@ -453,36 +453,36 @@
                             </a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
+                            <li>Adresse: Rue de Rivoli, 75001 Paris</li>
+                            <li>Phone: +33 07 00 00 00 00</li>
+                            <li>Email: Palais_du_cinema@gmail.com</li>
                         </ul>
                         <div class="fo-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://fr-fr.facebook.com/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/?hl=fr"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/login?lang=fr"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.pinterest.fr/"><i class="fa fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget fw-links">
-                        <h5>Useful Links</h5>
+                        <h5>informations</h5>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Model</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
+                            <li><a href="reservation.php">Reservation</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="Connexion.php">Connexion</a></li>
+                            <li><a href="Nouveaute.php">Nouveauté</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h5>Join The Newsletter</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="news-form">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit">Subscribe</button>
+                        <h5>Rejoinez la newsletter</h5>
+                        <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
+                        <form method="post" action="Manager/newsletter.php" class="news-form">
+                            <input type="text" name="mail" placeholder="Enter votre email">
+                            <button type="submit">Enregistrer</button>
                         </form>
                     </div>
                 </div>
