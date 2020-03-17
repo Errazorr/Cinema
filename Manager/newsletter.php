@@ -19,8 +19,8 @@ require '../vendor/autoload.php';
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'iliasverif@gmail.com';                     // SMTP username
-    $mail->Password   = 'Tamere95';                               // SMTP password
+    $mail->Username   = 'yanishverif@gmail.com';                     // SMTP username
+    $mail->Password   = 'Yanish93210';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -29,10 +29,11 @@ require '../vendor/autoload.php';
     $mail->addAddress($mail, 'Contact');     // Add a recipient //Recipients
      $mail->Body    =   'Merci de vous etre inscrit a la Newsletter vous aurait accées à toute les nouveautés nous concernant';
 $mail->send();
-    if ($connexion ==true){
+    if ($connexion == true){
       header("location: ../index.php");
     }
     else{
-      header("location: cdfe.php");
+      echo '<body onLoad="alert(\'Mail ou Mot de passe incorrect\')">';
+  echo '<meta http-equiv="refresh" content="0;URL=../index.php">';
     }
 ?>

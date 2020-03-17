@@ -217,12 +217,12 @@
                     <div class="footer-widget">
                         <h5>Instagram</h5>
                         <div class="insta-pic">
-                            <img src="img/instagram/instagram-1.jpg" alt="">
-                            <img src="img/instagram/instagram-2.jpg" alt="">
-                            <img src="img/instagram/instagram-3.jpg" alt="">
-                            <img src="img/instagram/instagram-4.jpg" alt="">
-                            <img src="img/instagram/instagram-5.jpg" alt="">
-                            <img src="img/instagram/instagram-6.jpg" alt="">
+                            <img src="../img/instagram/instagram-1.jpg" alt="">
+                            <img src="../img/instagram/instagram-2.jpg" alt="">
+                            <img src="../img/instagram/instagram-3.jpg" alt="">
+                            <img src="../img/instagram/instagram-4.jpg" alt="">
+                            <img src="../img/instagram/instagram-5.jpg" alt="">
+                            <img src="../img/instagram/instagram-6.jpg" alt="">
                         </div>
                     </div>
                 </div>

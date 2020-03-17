@@ -41,7 +41,8 @@ $mail->setFrom('iliasverif@gmail.com', 'Info');
 $mail->addAddress($donnee->getmail(), 'Contact');     // Add a recipient //Recipients
  $mail->Body    =   $donnee->getmessage();
 if(!$mail->Send()) {
-   echo "Mailer Error: " . $donnee->getmail()->ErrorInfo;
+  echo '<body onLoad="alert(\'Erreur\')">';
+echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
 } else {
    header("location: ../index.php");
 }
