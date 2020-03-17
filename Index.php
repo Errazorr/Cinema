@@ -439,10 +439,17 @@
                     <div class="footer-widget fw-links">
                         <h5>Informations</h5>
                         <ul>
+<<<<<<< HEAD
                             <li><a href="reservation.php">Réservation</a></li>
                             <li><a href="contact.php">Contact</a></li>
                             <li><a href="Connexion.php">Connexion</a></li>
                             <li><a href="Nouveaute.php">Nouveautés</a></li>
+=======
+                            <li><a href="View/reservation.php">Reservation</a></li>
+                            <li><a href="View/contact.php">Contact</a></li>
+                            <li><a href="View/Connexion.php">Connexion</a></li>
+                            <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+>>>>>>> 6a3626fa20e2660a0a7f27bf729ebf6cdc79343d
                         </ul>
                     </div>
                 </div>
