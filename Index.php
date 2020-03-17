@@ -148,14 +148,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Portfolio</span>
-                        <h2>Turn Your Dream Into Reality</h2>
+                        <span>Les films</span>
+                        <h2>du mois</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="portfolio-item set-bg large-item" data-setbg="img/portfolio/portfolio-1.jpg">
+                    <div class="portfolio-item set-bg large-item" data-setbg="img/foret.jpg">
                         <div class="pi-hover">
                             <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                             <a href="img/portfolio/portfolio-1.jpg" class="search-icon image-popup"><i
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="portfolio-item set-bg" data-setbg="img/portfolio/portfolio-2.jpg">
+                    <div class="portfolio-item set-bg" data-setbg="img/avant.jpg">
                         <div class="pi-hover">
                             <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                             <a href="img/portfolio/portfolio-2.jpg" class="search-icon image-popup"><i
@@ -173,7 +173,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="portfolio-item set-bg" data-setbg="img/portfolio/portfolio-3.jpg">
+                            <div class="portfolio-item set-bg" data-setbg="img/sonic.jpg">
                                 <div class="pi-hover">
                                     <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                                     <a href="img/portfolio/portfolio-3.jpg" class="search-icon image-popup"><i
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item set-bg" data-setbg="img/portfolio/portfolio-4.jpg">
+                            <div class="portfolio-item set-bg" data-setbg="img/gaull.jpg">
                                 <div class="pi-hover">
                                     <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                                     <a href="img/portfolio/portfolio-4.jpg" class="search-icon image-popup"><i
@@ -204,31 +204,29 @@
                 <div class="col-lg-6">
                     <div class="counter-text">
                         <div class="section-title">
-                            <span>Number Speaks</span>
-                            <h2>We have a lot of <br />experience</h2>
+                            <span>Nos cinémas</span>
+                            <h2>Nous avons beaucoup de cinéma<br/>en France</h2>
                         </div>
-                        <a href="#" class="primary-btn">En savoir plus</a>
+                        <a href="View/contact.php" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="counter-item">
                         <div class="ci-number count">
-                            2034
+                            350
                         </div>
                         <div class="ci-text">
-                            <h4>Successful projects</h4>
-                            <p>Since its establishment in 2005, Fashion has been focusing on project management &
-                                implementation through cooperation.</p>
+                            <h4>Films projetter</h4>
+                            <p>C'est le nombres de projection de film par jour afficher dans notre cinéma à Paris.</p>
                         </div>
                     </div>
                     <div class="counter-item">
                         <div class="ci-number count">
-                            1054
+                            132
                         </div>
                         <div class="ci-text">
-                            <h4>Events</h4>
-                            <p>Since its establishment in 2005, Fashion has been focusing on project management &
-                                implementation through cooperation.</p>
+                            <h4>évènements</h4>
+                            <p>C'est le nombres d'évenements organiser depuis le 1er janvier </p>
                         </div>
                     </div>
                 </div>
@@ -249,10 +247,9 @@
                         <div class="ti-text">
                             <div class="ti-title">
                                 <h4>Travis Crawford</h4>
-                                <span>Designer</span>
+                                <span>Employé chez palais du cinéma</span>
                             </div>
-                            <p>Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                magnam aliquam quaerat voluptatem.</p>
+                            <p>Chaque jour c'est un plaisir de venir travailer dans cette arêne qui est le palais du cinéma.</p>
                         </div>
                     </div>
                 </div>
@@ -264,10 +261,9 @@
                         <div class="ti-text">
                             <div class="ti-title">
                                 <h4>Noah Padilla</h4>
-                                <span>Designer</span>
+                                <span>De passange a Paris</span>
                             </div>
-                            <p>Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                magnam aliquam quaerat voluptatem.</p>
+                            <p>J'ai décider d'allée au palais du cinéma avec des amis et je n'est ne regrette pas, cinéma tres agréable, confortable.</p>
                         </div>
                     </div>
                 </div>
@@ -312,11 +308,10 @@
             <div class="row">
                 <div class="col-lg-10 m-auto">
                     <div class="ctc-text">
-                        <h2>We Create Trends For The World</h2>
-                        <p>Donec faucibus consequat ante. Mauris eget mi sed ex efficitur porta id non quam. Cras
-                            aliquam turpis tellus, quis laoreet lacus congue sed. Nullam at est quis urna vestibulum
-                            interdum. Praesent auctor leo ut massa ultrices tempor.</p>
-                        <a href="#" class="primary-btn ctc-btn">Work With Us</a>
+                        <h2>La fête du cinéma</h2>
+                        <p>Pour cette année la fête du cinéma aura lieu du 28 juin au 1er juillet 2020. En attendant, place au Printemps
+                          du Cinéma du 29 au 31 mars !</p>
+                        <a href="http://www.feteducinema.com/" class="primary-btn ctc-btn">En savoir plus !</a>
                     </div>
                 </div>
             </div>
@@ -380,8 +375,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Latest Blog</span>
-                        <h2>From Our Blog</h2>
+                        <span>Les films</span>
+                        <h2>A venir !</h2>
                     </div>
                 </div>
             </div>
@@ -390,23 +385,23 @@
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="img/blog/blog-1.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="img/widow.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
+                                        <li><i class="fa fa-calendar-o"></i>  29 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 0</li>
                                     </ul>
-                                    <h4><a href="#">Every Single Way You Can Wear Pastel Makeup This Spring</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <h4><a href="#"></a></h4>
+                                    <p>Natasha Romanoff, alias Black Widow, voit resurgir la part la plus sombre de son passé pour faire face à une redoutable conspiration liée à sa vie d’autrefois</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
-                                            <img src="img/blog/author-1.jpg" alt="">
+                                            <img src="img/widow.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Jeff Rodriguez</h5>
-                                            <span>Designer</span>
+                                            <h5>Black Widow</h5>
+                                            <span>Action</span>
                                         </div>
                                     </div>
                                 </div>
@@ -418,23 +413,22 @@
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="img/blog/blog-2.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="img/fast.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
+                                        <li><i class="fa fa-calendar-o"></i>Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 0</li>
                                     </ul>
-                                    <h4><a href="#">Everything Coming to Netflix Canada in May 2019</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <h4><a href="#"><p>Le neuvième volet de la saga "Fast & Furious"...</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
-                                            <img src="img/blog/author-1.jpg" alt="">
+                                            <img src="img/fast.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Aaron Russell</h5>
-                                            <span>Content</span>
+                                            <h5>Fast & Furious 9</h5>
+                                            <span>Aventure, action</span>
                                         </div>
                                     </div>
                                 </div>
