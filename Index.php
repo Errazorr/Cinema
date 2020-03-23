@@ -61,10 +61,10 @@ $role= $req->fetch();
                         <?php
                         if (isset($_SESSION['mail'])){
                           if ($role == "client") { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
-                            <li><a href="View/Film.php">Film & évènement</a>
+                            <li class="active"><a href="index.php">Accueil</a></li>
+                            <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
-                                    <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                    <li><a href="View/Nouveaute.php">Nouveauté</a></li>
                                     <li><a href="View/Prochainement.php">Prochainement</a></li>
                                 </ul>
                             </li>
@@ -74,11 +74,11 @@ $role= $req->fetch();
                           <?php  }
 
                            else { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
+                            <li class="active"><a href="index.php">Accueil</a></li>
                             <li><a href="View/reservation.php">Réservation</a></li>
-                            <li><a href="View/Film.php">Film & évènement</a>
+                            <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
-                                    <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                    <li><a href="View/Nouveaute.php">Nouveauté</a></li>
                                     <li><a href="View/Prochainement.php">Prochainement</a></li>
                                 </ul>
                             </li>
@@ -88,10 +88,10 @@ $role= $req->fetch();
                         <?php }
                       }
                       else{ ?>
-                          <li class="active"><a href="../index.php">Accueil</a></li>
-                          <li><a href="View/Film.php">Film & évènement</a>
+                          <li class="active"><a href="index.php">Accueil</a></li>
+                          <li><a href="View/Nouveaute.php">Film & évènement</a>
                               <ul class="dropdown">
-                                  <li><a href="View/Nouveauté.php">Nouveauté</a></li>
+                                  <li><a href="View/Nouveaute.php">Nouveauté</a></li>
                                   <li><a href="View/Prochainement.php">Prochainement</a></li>
                               </ul>
                           </li>
@@ -486,17 +486,10 @@ $role= $req->fetch();
                     <div class="footer-widget fw-links">
                         <h5>Informations</h5>
                         <ul>
-<<<<<<< HEAD
                             <li><a href="View/reservation.php">Reservation</a></li>
                             <li><a href="View/contact.php">Contact</a></li>
                             <li><a href="View/Connexion.php">Connexion</a></li>
                             <li><a href="View/Nouveaute.php">Nouveauté</a></li>
-=======
-                            <li><a href="reservation.php">Réservation</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="Connexion.php">Connexion</a></li>
-                            <li><a href="Nouveaute.php">Nouveautés</a></li>
->>>>>>> a5deab404e5ccde72a78c2c5ddd1a67dc0366360
                         </ul>
                     </div>
                 </div>
