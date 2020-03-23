@@ -41,29 +41,29 @@
 					</div>
 					<div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form>
+							<form method="POST" action="../Traitement/Reservation.php">
 								<div class="form-group">
 									<span class="form-label">Choisir le film</span>
-									<select class="form-control">
-										<option>l'apelle de la foret</option>
+									<select class="form-control" name="film" placeholder="Choisissez un film">
+										<option>L'appel de la forêt</option>
 										<option>Sonic le film</option>
-										<option>De Gaull</option>
-										<option>En Avant disney</option>
+										<option>De Gaulle</option>
+										<option>En Avant Disney</option>
 									</select>
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<span class="form-label">Choisir la date</span>
-											<input class="form-control" type="date" required>
+											<input class="form-control" type="date" name="date" placeholder="aaaa/mm/jj" required>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="form-group">
-											<span class="form-label">Navigo</span>
-											<select class="form-control">
+											<span class="form-label">Adolescents</span>
+											<select class="form-control" name="ado">
 												<option>0</option>
 												<option>1</option>
 												<option>2</option>
@@ -75,7 +75,7 @@
 									<div class="col-sm-4">
 										<div class="form-group">
 											<span class="form-label">Adulte</span>
-											<select class="form-control">
+											<select class="form-control" name="adulte">
 												<option>0</option>
 												<option>1</option>
 												<option>2</option>
@@ -87,7 +87,7 @@
 									<div class="col-sm-4">
 										<div class="form-group">
 											<span class="form-label">Enfant</span>
-											<select class="form-control">
+											<select class="form-control" name="enfant">
 												<option>0</option>
 												<option>1</option>
 												<option>2</option>
