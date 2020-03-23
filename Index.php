@@ -88,7 +88,7 @@ $role= $req->fetch();
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }
 
-                        else {?>
+                          else {?>
                           <li class="active"><a href="../index.php">Accueil</a></li>
                           <li><a href="View/Film.php">Film & évènement</a>
                               <ul class="dropdown">
