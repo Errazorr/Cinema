@@ -18,7 +18,7 @@ class methode{
     if ($donnees['mail'] == $connexion->getMail() AND $donnees['mdp'] == md5($connexion->getMdp())) {
       $_SESSION['nom'] = $connexion->getNom();
       $_SESSION['mail'] = $connexion->getMail();
-
+      $_SESSION['role'] = $a['role'];
       header('Location: ../Index.php');
     }
 
