@@ -60,8 +60,7 @@ $role= $req->fetch();
 
                         <?php
                         if (isset($_SESSION['mail'])){
-                          if ($role == "admin") { ?>
-
+                          if ($role == "client") { ?>
                             <li class="active"><a href="../index.php">Accueil</a></li>
                             <li><a href="View/Film.php">Film & évènement</a>
                                 <ul class="dropdown">
@@ -70,7 +69,7 @@ $role= $req->fetch();
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/compte_admin.php">Mon compte</a></li>
+                            <li><a href="View/compte_client.php">Mon compte</a></li>
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                           <?php  }
 
@@ -84,7 +83,7 @@ $role= $req->fetch();
                                 </ul>
                             </li>
                             <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/compte_client.php">Mon compte</a></li>
+                            <li><a href="View/compte_admin.php">Mon compte</a></li>
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }
                       }
