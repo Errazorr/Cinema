@@ -45,10 +45,10 @@
 								<div class="form-group">
 									<span class="form-label">Choisir le film</span>
 									<select class="form-control">
-										<option>l'apelle de la foret</option>
+										<option>l'appel de la forêt</option>
 										<option>Sonic le film</option>
-										<option>De Gaull</option>
-										<option>En Avant disney</option>
+										<option>De Gaulle</option>
+										<option>En Avant Disney</option>
 									</select>
 								</div>
 								<div class="row">
