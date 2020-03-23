@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 16 mars 2020 à 12:37
+-- Généré le :  lun. 23 mars 2020 à 11:20
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -78,6 +78,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `num_salle` int(11) NOT NULL,
   `prix` int(11) NOT NULL,
   `nb_pers` int(11) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_nom` (`nom`),
   KEY `fk_numsalle` (`num_salle`),
@@ -100,7 +101,17 @@ CREATE TABLE IF NOT EXISTS `salle` (
   `nb_places` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `num` (`num`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `salle`
+--
+
+INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`) VALUES
+(1, 1, 'L\'appel de la foret', 'Le chien Buck vivait depuis quatre ans dans la famille du juge Miller, au Sud des États-Unis, quand il s\'est vu impliqué, malgré lui, dans l\'aventure de la ruée vers l\'or du Nord.', 'non', 50),
+(2, 3, 'Sonic le film', 'Sonic et Tom unissent leurs forces pour tenter d\'empêcher le terrible Dr. Robotnik de capturer Sonic, ce dernier souhaitant utiliser son immense pouvoir pour dominer le monde.', 'non', 100),
+(3, 4, 'De Gaulle', 'La guerre s\'intensifie, l\'armée française s\'effondre, les Allemands seront bientôt à Paris. La panique gagne le gouvernement qui envisage d\'accepter la défaite. Un homme, Charles de Gaulle, fraîchement promu général, veut infléchir le cours de l\'Histoire.', 'Non', 50),
+(4, 7, 'En Avant Disney', 'Dans la banlieue d\'un univers imaginaire, deux frères elfes se lancent dans une quête extraordinaire pour découvrir s\'il reste encore un peu de magie dans le monde.', 'Oui', 70);
 
 --
 -- Contraintes pour les tables déchargées
