@@ -19,7 +19,7 @@ $role= $req->fetch();
     <meta name="keywords" content="Hazze, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nous contacter</title>
+    <title>Hazze | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
@@ -34,6 +34,7 @@ $role= $req->fetch();
     <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
+
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -106,85 +107,75 @@ $role= $req->fetch();
     </header>
     <!-- Header End -->
 
-    <!-- Map Section Begin -->
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.131590048758!2d-75.49285368518825!3d40.60492025209744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c439862c390e25%3A0xd8a76e7325ce28ea!2sLiberty%20St%2C%20Allentown%2C%20PA%2C%20USA!5e0!3m2!1sen!2sbd!4v1580135217665!5m2!1sen!2sbd"
-            height="500" style="border:0;" allowfullscreen=""></iframe>
-    </div>
-    <!-- Map Section End -->
-
-    <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    <!-- Gallery Section Begin -->
+    <div class="gallery-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="contact-text">
-                        <h4>Nous rejoindre !</h4>
-                        <div class="ct-item">
-                            <div class="ci-icon">
-                                <span class="ti-location-pin"></span>
-                            </div>
-                            <div class="ci-text">
-                                <ul>
-                                    <li>
-                                        <span>Localisation</span>
-                                        Champ de Mars, Avenue de la Bourdonnais, 75007 Paris
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="ct-item">
-                            <div class="ci-icon">
-                                <span class="ti-mobile"></span>
-                            </div>
-                            <div class="ci-text">
-                                <ul>
-                                    <li>
-                                        <span>Telephone</span>
-                                        +33 07 00 00 00 00
-                                    </li>
-                                </ul>
+                <div class="col-lg-12">
+                    <div class="gallery-controls">
+                        <ul>
+                            <li class="active" data-filter=".all">Tout les films</li>
+                            <li data-filter=".fashion">Action</li>
+                            <li data-filter=".model">Aventure</li>
+                            <li data-filter=".event">Drama</li>
+                            <li data-filter=".other">Comic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row gallery-filter">
+                <div class="col-lg-6 mix all fashion">
+                    <div class="gs-item">
+                        <img src="../img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 mix all model">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-2.jpg" alt="">
                             </div>
                         </div>
-                        <div class="ct-item">
-                            <div class="ci-icon">
-                                <span class="ti-email"></span>
+                        <div class="col-lg-6 mix all event">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-3.jpg" alt="">
                             </div>
-                            <div class="ci-text">
-                                <ul>
-                                    <li>
-                                        <span>Mail</span>
-                                        Palais_du_cinema@gmail.com
-                                    </li>
-                                </ul>
+                        </div>
+                        <div class="col-lg-6 mix all other">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mix all fashion">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-5.jpg" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="contact-option">
-                        <h4>Nous contacter !</h4>
-                        <form action="../Manager/Contact.php" method="post" class="comment-form contact-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" name="nom" placeholder="nom">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="mail" placeholder="mail">
-                                </div>
-                                <div class="col-lg-12">
-                                      <input type="text" name="message" placeholder="message">
-                                    <button type="submit" class="site-btn">Envoyer</button>
-                                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 mix all event">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-6.jpg" alt="">
                             </div>
-                        </form>
+                        </div>
+                        <div class="col-lg-6 mix all model other">
+                            <div class="gs-item">
+                                <img src="../img/gallery/gallery-7.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mix all fashion event">
+                    <div class="gs-item">
+                        <img src="../img/gallery/gallery-8.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Contact Section End -->
+    </div>
+    <!-- Gallery Section End -->
 
     <!-- Footer Section Begin -->
     <section class="footer-section">
@@ -194,12 +185,12 @@ $role= $req->fetch();
                     <div class="footer-option">
                         <div class="fo-logo">
                             <a href="#">
-                                <img src="img/logo.png" alt="">
+                                <img src="../img/logo.png" alt="">
                             </a>
                         </div>
                         <ul>
                             <li>Adresse: Rue de Rivoli, 75001 Paris</li>
-                            <li>Phone: +33 07 00 00 00 00</li>
+                            <li>Phone: +33 7 00 00 00 00</li>
                             <li>Email: Palais_du_cinema@gmail.com</li>
                         </ul>
                         <div class="fo-social">
@@ -212,7 +203,7 @@ $role= $req->fetch();
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget fw-links">
-                        <h5>informations</h5>
+                        <h5>Informations</h5>
                         <ul>
                             <li><a href="reservation.php">Reservation</a></li>
                             <li><a href="contact.php">Contact</a></li>
@@ -225,7 +216,7 @@ $role= $req->fetch();
                     <div class="footer-widget">
                         <h5>Rejoinez la newsletter</h5>
                         <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
-                        <form method="post" action="Manager/newsletter.php" class="news-form">
+                        <form method="post" action="../Manager/newsletter.php" class="news-form">
                             <input type="text" name="mail" placeholder="Enter votre email">
                             <button type="submit">Enregistrer</button>
                         </form>
@@ -246,7 +237,7 @@ $role= $req->fetch();
                 </div>
             </div>
             <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
         </div>
     </section>
