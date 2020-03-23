@@ -17,6 +17,7 @@ class methode{
 
     if ($donnees['mail'] == $connexion->getMail() AND $donnees['mdp'] == md5($connexion->getMdp())) {
       $_SESSION['nom'] = $connexion->getNom();
+      $_SESSION['tel'] = $connexion->getTel();
       $_SESSION['mail'] = $connexion->getMail();
       $_SESSION['role'] = $a['role'];
       header('Location: ../Index.php');
@@ -57,5 +58,49 @@ class methode{
       header('Location: ../Index.php');
     }
 
+  }
+
+
+  public function reservation(reservation $reservation){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('SELECT * FROM reservation WHERE nom=?');
+    $req->execute(array($reservation->getNom()));
+    $donnees= $req->fetch();
+
+    if ($donnees) {
+      echo '<body onLoad="alert(\'Une réservation à ce nom a déjà été faite\')">';
+
+      echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
+    }
+
+    else {
+
+      if ($reservation->getFilm() == 'L\'appel de la forêt') {
+        $salle = 1;
+      }
+      if ($reservation->getFilm() == 'Sonic le film') {
+        $salle = 2;
+      }
+      if ($reservation->getFilm() == 'De Gaulle') {
+        $salle = 3;
+      }
+      if ($reservation->getFilm() == 'En Avant Disney') {
+        $salle = 4;
+      }
+
+
+
+      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers) VALUES (?,?,?,?,?)');
+      $req->execute(array($reservation->getNom(), $reservation->getTel(), $salle, $prix, $nb_pers, 'client'));
+      $_SESSION['nom'] = $reservation->getNom();
+      $_SESSION['prenom'] = $reservation->getPrenom();
+      header('Location: ../Index.php');
+    }
   }
 }
