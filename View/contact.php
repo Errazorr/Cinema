@@ -22,8 +22,7 @@ $role= $req->fetch();
     <title>Nous contacter</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
@@ -33,6 +32,13 @@ $role= $req->fetch();
     <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+   <!-- fin-->
+   <style type="text/css">
+          #map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+              height:400px;
+          }
+      </style>
 </head>
 <body>
     <!-- Page Preloder -->
@@ -105,13 +111,37 @@ $role= $req->fetch();
         </div>
     </header>
     <!-- Header End -->
-
+    <div id="map">
+      <!-- Ici s'affichera la carte -->
+      </div>
     <!-- Map Section Begin -->
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.131590048758!2d-75.49285368518825!3d40.60492025209744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c439862c390e25%3A0xd8a76e7325ce28ea!2sLiberty%20St%2C%20Allentown%2C%20PA%2C%20USA!5e0!3m2!1sen!2sbd!4v1580135217665!5m2!1sen!2sbd"
-            height="500" style="border:0;" allowfullscreen=""></iframe>
-    </div>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <script type="text/javascript">
+              // On initialise la latitude et la longitude de Paris (centre de la carte)
+              var lat = 48.852969;
+              var lon = 2.349903;
+              var macarte = null;
+              // Fonction d'initialisation de la carte
+              function initMap() {
+                  // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                  macarte = L.map('map').setView([lat, lon], 11);
+                  // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+                  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                      // Il est toujours bien de laisser le lien vers la source des données
+                      attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                      minZoom: 1,
+                      maxZoom: 20
+                  }).addTo(macarte);
+              }
+              window.onload = function(){
+      // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+
+      initMap();
+      var marker = L.marker([48.86377, 2.33205]).addTo(macarte);
+              };
+          </script>
+  </div>
+  <!-- Map Section End -->
     <!-- Map Section End -->
 
     <!-- Contact Section Begin -->
