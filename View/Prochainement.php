@@ -118,7 +118,7 @@ $role= $req->fetch();
                             <li data-filter=".fashion">Action</li>
                             <li data-filter=".model">Aventure</li>
                             <li data-filter=".event">Drama</li>
-                            <li data-filter=".other">Comic</li>
+                            <li data-filter=".other">Comédie</li>
                         </ul>
                     </div>
                 </div>
@@ -126,29 +126,29 @@ $role= $req->fetch();
             <div class="row gallery-filter">
                 <div class="col-lg-6 mix all fashion">
                     <div class="gs-item">
-                        <img src="../img/gallery/gallery-1.jpg" alt="">
+                        <img src="../img/gallery/fast.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-6 mix all model">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-2.jpg" alt="">
+                                <img src="../img/gallery/wonder.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 mix all event">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-3.jpg" alt="">
+                                <img src="../img/gallery/man.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 mix all other">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-4.jpg" alt="">
+                                <img src="../img/gallery/Tuchee.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 mix all fashion">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-5.jpg" alt="">
+                                <img src="../img/gallery/jurassice.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -157,19 +157,19 @@ $role= $req->fetch();
                     <div class="row">
                         <div class="col-lg-6 mix all event">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-6.jpg" alt="">
+                                <img src="../img/gallery/gun.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 mix all model other">
                             <div class="gs-item">
-                                <img src="../img/gallery/gallery-7.jpg" alt="">
+                                <img src="../img/gallery/Tuche.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mix all fashion event">
                     <div class="gs-item">
-                        <img src="../img/gallery/gallery-8.jpg" alt="">
+                        <img src="../img/gallery/bateau.jpg" alt="">
                     </div>
                 </div>
             </div>
