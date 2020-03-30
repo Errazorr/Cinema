@@ -224,7 +224,7 @@ $role= $req->fetch();
                     <div class="footer-option">
                         <div class="fo-logo">
                             <a href="#">
-                                <img src="img/logo.png" alt="">
+                                <img src="../img/logo.png" alt="">
                             </a>
                         </div>
                         <ul>
@@ -254,8 +254,8 @@ $role= $req->fetch();
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5>Rejoinez la newsletter</h5>
-                        <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
-                        <form method="post" action="Manager/newsletter.php" class="news-form">
+                        <p>Vous devez être inscrit pour pouvoir vous inscrire à la newsletter.</p>
+                        <form method="post" action="../Manager/newsletter.php" class="news-form">
                             <input type="text" name="mail" placeholder="Enter votre email">
                             <button type="submit">Enregistrer</button>
                         </form>

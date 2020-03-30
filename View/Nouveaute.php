@@ -120,7 +120,7 @@ $role= $req->fetch();
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i>1 Avril 2020</li>
+                                        <li><i class="fa fa-calendar-o"></i>Le 1 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 0</li>
                                     </ul>
                                     <p> Les Grands Voisins. À travers leurs trajectoires et celles des membres fondateurs du lieu, le film interroge notre désir et notre capacité à inventer d'autres manières de vivre ensemble.</p>
@@ -147,7 +147,7 @@ $role= $req->fetch();
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i>1 Avril 2020</li>
+                                        <li><i class="fa fa-calendar-o"></i> Le 1 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 1</li>
                                     </ul>
                                     <p>Découvrez Les petits contes de la nuit, à partir du 1er avril. Une histoire, un câlin, un bon lit, il en faut peu pour bien dormir ! Six contes-doudous pour aborder avec les tout-petits l'univers du sommeil et de la nuit.</p>
@@ -169,7 +169,7 @@ $role= $req->fetch();
                     <div class="blog-item solid-bg">
                         <div class="bi-text">
                             <ul>
-                                <li><i class="fa fa-calendar-o"></i>11 Avril 2020</li>
+                                <li><i class="fa fa-calendar-o"></i>Le 11 Avril 2020</li>
                                 <li><i class="fa fa-commenting-o"></i> 8</li>
                             </ul>
                             <h4><a href="./blog-details.html">En direct de New-York</a></h4>
@@ -194,7 +194,7 @@ $role= $req->fetch();
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i>2 Avril 2020</li>
+                                        <li><i class="fa fa-calendar-o"></i>Le 2 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 4</li>
                                     </ul>
                                     <p> Redécouvrez sur grand écran le quatrième opus où Daniel Craig incarne l'agent 007. Un message cryptique venu tout droit de son passé pousse Bond à enquêter sur une sinistre organisation.</p>
@@ -221,7 +221,7 @@ $role= $req->fetch();
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i>Avant premiére le 2 Avril 2020</li>
+                                        <li><i class="fa fa-calendar-o"></i>le 8 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 2</li>
                                     </ul>
                                     <p>Béa, Thomas et les lapins forment désormais une famille recomposée, mais Pierre a beau faire tout son possible, il ne semble parvenir à se débarrasser de la réputation de voyou qui lui colle à la peau.</p>
@@ -247,7 +247,7 @@ $role= $req->fetch();
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i>Avant premiére le 1er Avril 2020</li>
+                                        <li><i class="fa fa-calendar-o"></i>Le 1 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 1</li>
                                     </ul>
                                     <p>Catherine et Yann sont en couple et amoureux depuis de nombreuses années. Cependant, depuis que Yann a quitté son travail, il s'est pris de passion pour les bonsaïs. Une passion dévorante...</p>
@@ -277,7 +277,7 @@ $role= $req->fetch();
                     <div class="footer-option">
                         <div class="fo-logo">
                             <a href="#">
-                                <img src="img/logo.png" alt="">
+                                <img src="../img/logo.png" alt="">
                             </a>
                         </div>
                         <ul>
@@ -307,7 +307,7 @@ $role= $req->fetch();
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5>Rejoinez la newsletter</h5>
-                        <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
+                        <p>Vous devez être inscrit pour pouvoir vous inscrire à la newsletter.</p>
                         <form method="post" action="../Manager/newsletter.php" class="news-form">
                             <input type="text" name="mail" placeholder="Enter votre email">
                             <button type="submit">Enregistrer</button>

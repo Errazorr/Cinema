@@ -205,7 +205,7 @@ $role= $req->fetch();
                     <div class="portfolio-item set-bg large-item" data-setbg="img/foret.jpg">
                         <div class="pi-hover">
                             <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
-                            <a href="img/portfolio/portfolio-1.jpg" class="search-icon image-popup"><i
+                            <a href="img/foret.jpg" class="search-icon image-popup"><i
                                     class="fa fa-search"></i></a>
                         </div>
                     </div>
@@ -214,7 +214,7 @@ $role= $req->fetch();
                     <div class="portfolio-item set-bg" data-setbg="img/avant.jpg">
                         <div class="pi-hover">
                             <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
-                            <a href="img/portfolio/portfolio-2.jpg" class="search-icon image-popup"><i
+                            <a href="img/avant.jpg" class="search-icon image-popup"><i
                                     class="fa fa-search"></i></a>
                         </div>
                     </div>
@@ -223,7 +223,7 @@ $role= $req->fetch();
                             <div class="portfolio-item set-bg" data-setbg="img/sonic.jpg">
                                 <div class="pi-hover">
                                     <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
-                                    <a href="img/portfolio/portfolio-3.jpg" class="search-icon image-popup"><i
+                                    <a href="img/sonic.jpg" class="search-icon image-popup"><i
                                             class="fa fa-search"></i></a>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@ $role= $req->fetch();
                             <div class="portfolio-item set-bg" data-setbg="img/gaull.jpg">
                                 <div class="pi-hover">
                                     <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
-                                    <a href="img/portfolio/portfolio-4.jpg" class="search-icon image-popup"><i
+                                    <a href="img/gaull.jpg" class="search-icon image-popup"><i
                                             class="fa fa-search"></i></a>
                                 </div>
                             </div>
@@ -496,7 +496,7 @@ $role= $req->fetch();
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5>Rejoinez la newsletter</h5>
-                        <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
+                        <p>Vous devez être inscrit pour pouvoir vous inscrire à la newsletter.</p>
                         <form method="post" action="Manager/newsletter.php" class="news-form">
                             <input type="text" name="mail" placeholder="Enter votre email">
                             <button type="submit">Enregistrer</button>

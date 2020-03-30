@@ -215,7 +215,7 @@ $role= $req->fetch();
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5>Rejoinez la newsletter</h5>
-                        <p>Renseignez votre email pour profiter de toutes nos offres et nouveautés</p>
+                        <p>Vous devez être inscrit pour pouvoir vous inscrire à la newsletter.</p>
                         <form method="post" action="../Manager/newsletter.php" class="news-form">
                             <input type="text" name="mail" placeholder="Enter votre email">
                             <button type="submit">Enregistrer</button>
