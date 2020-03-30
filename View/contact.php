@@ -10,7 +10,7 @@ catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 $req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
-$req->execute(array($_SESSION['mail']));
+//$req->execute(array($_SESSION['mail']));//
 $role= $req->fetch();
  ?>
 <head>
@@ -159,7 +159,7 @@ $role= $req->fetch();
                                 <ul>
                                     <li>
                                         <span>Localisation</span>
-                                        Champ de Mars, Avenue de la Bourdonnais, 75007 Paris
+                                       Rue de Rivoli, 75001 Paris
                                     </li>
                                 </ul>
                             </div>
