@@ -1,7 +1,7 @@
 <?php
 session_start();
-require '../Model/Reservation.php';
 require '../Manager/Methodes.php';
+require '../Model/Reservation.php';
 
 if ($_POST['mdp'] != $_POST['confirm']) {
   echo '<body onLoad="alert(\'Les deux mots de passe sont différents\')">';
