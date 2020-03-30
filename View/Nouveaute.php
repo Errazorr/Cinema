@@ -115,23 +115,22 @@ $role= $req->fetch();
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="../img/blog/blog-1.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="../img/blog/Grand.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
+                                        <li><i class="fa fa-calendar-o"></i>1 Avril 2020</li>
                                         <li><i class="fa fa-commenting-o"></i> 0</li>
                                     </ul>
-                                    <h4><a href="./blog-details.html">Every Single Way You Can Wear Pastel Makeup This Spring</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <p> Les Grands Voisins. À travers leurs trajectoires et celles des membres fondateurs du lieu, le film interroge notre désir et notre capacité à inventer d'autres manières de vivre ensemble.</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
                                             <img src="..img/blog/author-1.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Jeff Rodriguez</h5>
-                                            <span>Designer</span>
+                                            <h5>Les grands voisins</h5>
+                                            <span>Documentaire</span>
                                         </div>
                                     </div>
                                 </div>
@@ -143,23 +142,22 @@ $role= $req->fetch();
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="../img/blog/blog-2.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="../img/blog/contes.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
-                                        <li><i class="fa fa-commenting-o"></i> 0</li>
+                                        <li><i class="fa fa-calendar-o"></i>1 Avril 2020</li>
+                                        <li><i class="fa fa-commenting-o"></i> 1</li>
                                     </ul>
-                                    <h4><a href="./blog-details.html">Everything Coming to Netflix Canada in May 2019</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <p>Découvrez Les petits contes de la nuit, à partir du 1er avril. Une histoire, un câlin, un bon lit, il en faut peu pour bien dormir ! Six contes-doudous pour aborder avec les tout-petits l'univers du sommeil et de la nuit.</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
                                             <img src="..img/blog/author-1.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Aaron Russell</h5>
-                                            <span>Content</span>
+                                            <h5>Les petit contes de la nuit</h5>
+                                            <span>Dessin-animé</span>
                                         </div>
                                     </div>
                                 </div>
@@ -171,19 +169,17 @@ $role= $req->fetch();
                     <div class="blog-item solid-bg">
                         <div class="bi-text">
                             <ul>
-                                <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
-                                <li><i class="fa fa-commenting-o"></i> 0</li>
+                                <li><i class="fa fa-calendar-o"></i>11 Avril 2020</li>
+                                <li><i class="fa fa-commenting-o"></i> 8</li>
                             </ul>
-                            <h4><a href="./blog-details.html">Rick Singer duped me out of $6.5 million, student's mother says</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et sed do eiusmod tempor incididunt ut labore </p>
+                            <h4><a href="./blog-details.html">En direct de New-York</a></h4>
+                            <p>Le prisonnier politique Angelotti s'est enfui de son lieu de détention et va trouver de l'aide auprès de son ami le peintre Cavaradossi. Le baron Scarpia, chef de la police, se doutant de la complicité du peintre, manipule son amante Floria Tosca en tirant profit de sa jalousie.</p>
                             <div class="bt-author">
                                 <div class="ba-pic">
-                                    <img src="../img/blog/author-1.jpg" alt="">
                                 </div>
                                 <div class="ba-text">
-                                    <h5>Jeff Rodriguez</h5>
-                                    <span>Designer</span>
+                                    <h5>Tosca (Metropolitan Opera)</h5>
+                                    <span>Piéce de théatre</span>
                                 </div>
                             </div>
                         </div>
@@ -193,23 +189,22 @@ $role= $req->fetch();
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="../img/blog/blog-3.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="../img/blog/spectre.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
-                                        <li><i class="fa fa-commenting-o"></i> 0</li>
+                                        <li><i class="fa fa-calendar-o"></i>2 Avril 2020</li>
+                                        <li><i class="fa fa-commenting-o"></i> 4</li>
                                     </ul>
-                                    <h4><a href="./blog-details.html">The Week in Pictures: April 25 - May 2</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <p> Redécouvrez sur grand écran le quatrième opus où Daniel Craig incarne l'agent 007. Un message cryptique venu tout droit de son passé pousse Bond à enquêter sur une sinistre organisation.</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
                                             <img src="..img/blog/author-2.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Aaron Russell</h5>
-                                            <span>Content</span>
+                                            <h5>Spectre</h5>
+                                            <span>Action</span>
                                         </div>
                                     </div>
                                 </div>
@@ -221,23 +216,21 @@ $role= $req->fetch();
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="../img/blog/blog-4.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="../img/blog/Pierre.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
-                                        <li><i class="fa fa-commenting-o"></i> 0</li>
+                                        <li><i class="fa fa-calendar-o"></i>Avant premiére le 2 Avril 2020</li>
+                                        <li><i class="fa fa-commenting-o"></i> 2</li>
                                     </ul>
-                                    <h4><a href="./blog-details.html">Measles scare at Newark Airport, cruise ship</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <p>Béa, Thomas et les lapins forment désormais une famille recomposée, mais Pierre a beau faire tout son possible, il ne semble parvenir à se débarrasser de la réputation de voyou qui lui colle à la peau.</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
-                                            <img src="../img/blog/author-1.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Jeff Rodriguez</h5>
-                                            <span>Designer</span>
+                                            <h5>Pierre lapin 2</h5>
+                                            <span>Dessin-animé</span>
                                         </div>
                                     </div>
                                 </div>
@@ -249,23 +242,21 @@ $role= $req->fetch();
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="bi-pic set-bg" data-setbg="../img/blog/blog-5.jpg"></div>
+                                <div class="bi-pic set-bg" data-setbg="../img/blog/soi.jpg"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bi-text">
                                     <ul>
-                                        <li><i class="fa fa-calendar-o"></i> August 9, 2019</li>
-                                        <li><i class="fa fa-commenting-o"></i> 0</li>
+                                        <li><i class="fa fa-calendar-o"></i>Avant premiére le 1er Avril 2020</li>
+                                        <li><i class="fa fa-commenting-o"></i> 1</li>
                                     </ul>
-                                    <h4><a href="./blog-details.html">Inside the $100 million upgrade in America’s</a></h4>
-                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <p>Catherine et Yann sont en couple et amoureux depuis de nombreuses années. Cependant, depuis que Yann a quitté son travail, il s'est pris de passion pour les bonsaïs. Une passion dévorante...</p>
                                     <div class="bt-author">
                                         <div class="ba-pic">
-                                            <img src="../img/blog/author-2.jpg" alt="">
                                         </div>
                                         <div class="ba-text">
-                                            <h5>Aaron Russell</h5>
-                                            <span>Content</span>
+                                            <h5>Chacun chez soi</h5>
+                                            <span>Drama</span>
                                         </div>
                                     </div>
                                 </div>
