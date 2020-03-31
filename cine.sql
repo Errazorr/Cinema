@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 23 mars 2020 à 11:20
+-- Généré le :  mar. 31 mars 2020 à 05:51
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -40,14 +40,15 @@ CREATE TABLE IF NOT EXISTS `compte` (
   PRIMARY KEY (`id`),
   KEY `nom` (`nom`),
   KEY `tel` (`tel`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `compte`
 --
 
 INSERT INTO `compte` (`id`, `nom`, `prenom`, `mail`, `tel`, `mdp`, `role`) VALUES
-(1, 'test', 'test', 'test@test.fr', '0612345678', '098f6bcd4621d373cade4e832627b4f6', 'admin');
+(1, 'test', 'test', 'test@test.fr', '0612345678', '098f6bcd4621d373cade4e832627b4f6', 'admin'),
+(2, 'aa', 'aa', 'aa@gmail.com', '0700000000', '4124bc0a9335c27f086f24ba207a4912', 'client');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,14 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `mail` varchar(50) NOT NULL,
   `message` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `nom`, `mail`, `message`) VALUES
+(1, 'test', 'test@test.fr', 'test');
 
 -- --------------------------------------------------------
 
