@@ -27,6 +27,9 @@
                         <input type="password" class="form-input" name="mdp" id="password" placeholder="Votre mot de passe"/>
                         <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                     </div>
+                      <div class="form-group">
+                    <a href="mot_de_passe.php" class="label-agree-term">Mot de passe oublier ?</a>
+                  </div>
                     <div class="form-group">
                         <input type="submit" name="submit" id="submit" class="form-submit submit" value="Se connecter"/>
                         <a href="Inscription.php" class="submit-link submit">Inscription</a>
