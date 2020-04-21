@@ -16,8 +16,8 @@ class methode{
     $donnees= $req->fetch();
 
     if ($donnees['mail'] == $connexion->getMail() AND $donnees['mdp'] == md5($connexion->getMdp())) {
-      $_SESSION['nom'] = $connexion->getNom();
-      $_SESSION['tel'] = $connexion->getTel();
+      $_SESSION['nom'] = $donnees['nom'];
+      $_SESSION['tel'] = $donnees['tel'];
       $_SESSION['mail'] = $connexion->getMail();
       $_SESSION['role'] = $donnees['role'];
       header('Location: ../Index.php');
@@ -69,17 +69,9 @@ class methode{
       die('Erreur:'.$e->getMessage());
     }
 
-    $req = $bdd->prepare('SELECT * FROM reservation WHERE nom=?');
+    $req = $bdd->prepare('SELECT * FROM compte WHERE nom=?');
     $req->execute(array($_SESSION['nom']));
     $donnees= $req->fetch();
-
-    if ($donnees) {
-      echo '<body onLoad="alert(\'Une réservation à ce nom a déjà été faite\')">';
-
-      echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
-    }
-
-    else {
 
       if ($reservation->getFilm() == 'L\'appel de la forêt') {
         $salle = 1;
@@ -97,14 +89,17 @@ class methode{
       $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
 
-      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date) VALUES (?,?,?,?,?,?)');
+      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
       $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
-      $_SESSION['nom'] = $reservation->getNom();
-      $_SESSION['prenom'] = $reservation->getPrenom();
       $_SESSION['prix'] = $prix;
-      var_dump($req);
+      var_dump($_SESSION['nom']);
+      var_dump($_SESSION['tel']);
+      var_dump($salle);
+      var_dump($prix);
+      var_dump($nb_pers);
+      var_dump($reservation->getDate());
+      var_dump($_SESSION);
       var_dump($a);
       //header('Location: ../Index.php');
-    }
   }
 }
