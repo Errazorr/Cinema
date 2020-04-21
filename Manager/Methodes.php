@@ -18,7 +18,7 @@ class methode{
       $_SESSION['nom'] = $connexion->getNom();
       $_SESSION['tel'] = $connexion->getTel();
       $_SESSION['mail'] = $connexion->getMail();
-      $_SESSION['role'] = $a['role'];
+      $_SESSION['role'] = $donnees['role'];
       header('Location: ../Index.php');
     }
 
@@ -93,13 +93,15 @@ class methode{
         $salle = 4;
       }
 
-
+      $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
+      $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
 
       $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers) VALUES (?,?,?,?,?)');
-      $req->execute(array($reservation->getNom(), $reservation->getTel(), $salle, $prix, $nb_pers, 'client'));
+      $req->execute(array($reservation->getNom(), $_SESSION['tel'], $salle, $prix, $nb_pers));
       $_SESSION['nom'] = $reservation->getNom();
       $_SESSION['prenom'] = $reservation->getPrenom();
-      header('Location: ../Index.php');
+      $_SESSION['prix'] = $prix;
+      //header('Location: ../Index.php');
     }
   }
 }
