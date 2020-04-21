@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('../Manager/Methodes.php');
 require_once('../Model/Reservation.php');
 
