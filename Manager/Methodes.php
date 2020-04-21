@@ -70,7 +70,7 @@ class methode{
     }
 
     $req = $bdd->prepare('SELECT * FROM reservation WHERE nom=?');
-    $req->execute(array($reservation->getNom()));
+    $req->execute(array($_SESSION['nom']));
     $donnees= $req->fetch();
 
     if ($donnees) {
@@ -97,11 +97,13 @@ class methode{
       $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
 
-      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers) VALUES (?,?,?,?,?)');
-      $req->execute(array($reservation->getNom(), $_SESSION['tel'], $salle, $prix, $nb_pers));
+      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date) VALUES (?,?,?,?,?,?)');
+      $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
       $_SESSION['nom'] = $reservation->getNom();
       $_SESSION['prenom'] = $reservation->getPrenom();
       $_SESSION['prix'] = $prix;
+      var_dump($req);
+      var_dump($a);
       //header('Location: ../Index.php');
     }
   }
