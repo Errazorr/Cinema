@@ -52,6 +52,7 @@ session_start();
                         if (isset($_SESSION['mail'])){
                           if ($_SESSION['role'] == "client") { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
+                            <li><a href="View/reservation.php">Réservation</a></li>
                             <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveaute.php">Nouveauté</a></li>
@@ -65,7 +66,6 @@ session_start();
 
                            else { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
-                            <li><a href="View/reservation.php">Réservation</a></li>
                             <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveaute.php">Nouveauté</a></li>
