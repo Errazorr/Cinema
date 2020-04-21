@@ -22,7 +22,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Mot de passe oublié</h2>
-                        <form method="POST" action="../Manager/mot_de_passe_oublie.php" class="register-form" id="register-form">
+                        <form method="POST" action="../Manager/mot_de_passe2.php" class="register-form" id="register-form">
                           <div class="form-group">
                               <label for="email"></label>
                               <input type="email" name="mail" id="email" placeholder="Votre email"/>

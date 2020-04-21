@@ -22,7 +22,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Mot de passe oublié</h2>
-                        <form method="POST" action="../Traitement/mot_de_passe.php" class="register-form" id="register-form">
+                        <form method="POST" action="../Manager/mot_de_passe1.php" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="mail" name="mail" id="mail" placeholder="Votre email"/>
