@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('../Model/User.php');
 
 class methode{
