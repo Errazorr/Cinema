@@ -3,16 +3,6 @@
 
 <?php
 session_start();
-
-try{
-  $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
-}
-catch (Exception $e){
-  die('Erreur:'.$e->getMessage());
-}
-$req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
-//$req->execute(array($_SESSION['mail']));//
-$role= $req->fetch();
  ?>
 
 <head>
@@ -60,8 +50,9 @@ $role= $req->fetch();
 
                         <?php
                         if (isset($_SESSION['mail'])){
-                          if ($role == "client") { ?>
+                          if ($_SESSION['role'] == "client") { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
+                            <li><a href="View/reservation.php">Réservation</a></li>
                             <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveaute.php">Nouveauté</a></li>
@@ -75,7 +66,6 @@ $role= $req->fetch();
 
                            else { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
-                            <li><a href="View/reservation.php">Réservation</a></li>
                             <li><a href="View/Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="View/Nouveaute.php">Nouveauté</a></li>

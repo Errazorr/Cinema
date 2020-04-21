@@ -19,7 +19,7 @@ class methode{
       $_SESSION['nom'] = $connexion->getNom();
       $_SESSION['tel'] = $connexion->getTel();
       $_SESSION['mail'] = $connexion->getMail();
-      $_SESSION['role'] = $a['role'];
+      $_SESSION['role'] = $donnees['role'];
       header('Location: ../Index.php');
     }
 
@@ -70,7 +70,7 @@ class methode{
     }
 
     $req = $bdd->prepare('SELECT * FROM reservation WHERE nom=?');
-    $req->execute(array($reservation->getNom()));
+    $req->execute(array($_SESSION['nom']));
     $donnees= $req->fetch();
 
     if ($donnees) {
@@ -94,13 +94,17 @@ class methode{
         $salle = 4;
       }
 
+      $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
+      $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
 
-
-      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers) VALUES (?,?,?,?,?)');
-      $req->execute(array($reservation->getNom(), $reservation->getTel(), $salle, $prix, $nb_pers, 'client'));
+      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date) VALUES (?,?,?,?,?,?)');
+      $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
       $_SESSION['nom'] = $reservation->getNom();
       $_SESSION['prenom'] = $reservation->getPrenom();
-      header('Location: ../Index.php');
+      $_SESSION['prix'] = $prix;
+      var_dump($req);
+      var_dump($a);
+      //header('Location: ../Index.php');
     }
   }
 }
