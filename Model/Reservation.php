@@ -1,6 +1,6 @@
 <?php
 
-require 'User.php';
+require_once 'User.php';
 
 class reservation extends user{
   private $_date;
