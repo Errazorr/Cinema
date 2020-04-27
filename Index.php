@@ -100,7 +100,7 @@ session_start();
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero-section set-bg" data-setbg="img/hero-bg.jpg">
+    <section class="hero-section set-bg" data-setbg="img/cinema.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -122,7 +122,7 @@ session_start();
             <div class="row">
                 <div class="col-lg-6">
                     <div class="as-pic">
-                        <img src="img/about-us.jpg" alt="">
+                        <img src="img/Histoire.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
