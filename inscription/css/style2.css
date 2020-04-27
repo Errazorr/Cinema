@@ -2,3 +2,11 @@
     background: #212529;
     padding: 150px 0;
 }
+
+body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #222;
+  background: #353535;
+  font-weight: 400;
+  font-family: Poppins; }
