@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 21 avr. 2020 à 09:09
+-- Généré le :  lun. 27 avr. 2020 à 08:00
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `cine`
 --
+CREATE DATABASE IF NOT EXISTS `cine` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `cine`;
 
 -- --------------------------------------------------------
 
@@ -89,9 +91,18 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `date_prevue` varchar(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_nom` (`nom`),
-  KEY `fk_numsalle` (`num_salle`),
-  KEY `fk_tel` (`tel`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  KEY `fk_tel` (`tel`),
+  KEY `fk_num_salle` (`num_salle`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `nom`, `tel`, `num_salle`, `prix`, `nb_pers`, `date_prevue`) VALUES
+(8, 'aa', '0700000000', 2, 40, 4, '2020-04-29'),
+(9, 'aa', '0700000000', 4, 48, 5, '2020-05-11'),
+(11, 'test', '0612345678', 2, 56, 6, '2020-04-28');
 
 -- --------------------------------------------------------
 
@@ -106,7 +117,8 @@ CREATE TABLE IF NOT EXISTS `salle` (
   `film` text NOT NULL,
   `description` text NOT NULL,
   `3D` char(3) NOT NULL,
-  `nb_places` int(11) NOT NULL,
+  `nb_places` int(11) UNSIGNED NOT NULL,
+  `places_restantes` int(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `num` (`num`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -115,11 +127,11 @@ CREATE TABLE IF NOT EXISTS `salle` (
 -- Déchargement des données de la table `salle`
 --
 
-INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`) VALUES
-(1, 1, 'L\'appel de la foret', 'Le chien Buck vivait depuis quatre ans dans la famille du juge Miller, au Sud des États-Unis, quand il s\'est vu impliqué, malgré lui, dans l\'aventure de la ruée vers l\'or du Nord.', 'non', 50),
-(2, 3, 'Sonic le film', 'Sonic et Tom unissent leurs forces pour tenter d\'empêcher le terrible Dr. Robotnik de capturer Sonic, ce dernier souhaitant utiliser son immense pouvoir pour dominer le monde.', 'non', 100),
-(3, 4, 'De Gaulle', 'La guerre s\'intensifie, l\'armée française s\'effondre, les Allemands seront bientôt à Paris. La panique gagne le gouvernement qui envisage d\'accepter la défaite. Un homme, Charles de Gaulle, fraîchement promu général, veut infléchir le cours de l\'Histoire.', 'Non', 50),
-(4, 7, 'En Avant Disney', 'Dans la banlieue d\'un univers imaginaire, deux frères elfes se lancent dans une quête extraordinaire pour découvrir s\'il reste encore un peu de magie dans le monde.', 'Oui', 70);
+INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`, `places_restantes`) VALUES
+(1, 1, 'L\'appel de la foret', 'Le chien Buck vivait depuis quatre ans dans la famille du juge Miller, au Sud des États-Unis, quand il s\'est vu impliqué, malgré lui, dans l\'aventure de la ruée vers l\'or du Nord.', 'non', 50, 50),
+(2, 3, 'Sonic le film', 'Sonic et Tom unissent leurs forces pour tenter d\'empêcher le terrible Dr. Robotnik de capturer Sonic, ce dernier souhaitant utiliser son immense pouvoir pour dominer le monde.', 'non', 100, 90),
+(3, 4, 'De Gaulle', 'La guerre s\'intensifie, l\'armée française s\'effondre, les Allemands seront bientôt à Paris. La panique gagne le gouvernement qui envisage d\'accepter la défaite. Un homme, Charles de Gaulle, fraîchement promu général, veut infléchir le cours de l\'Histoire.', 'Non', 50, 50),
+(4, 7, 'En Avant Disney', 'Dans la banlieue d\'un univers imaginaire, deux frères elfes se lancent dans une quête extraordinaire pour découvrir s\'il reste encore un peu de magie dans le monde.', 'Oui', 70, 65);
 
 --
 -- Contraintes pour les tables déchargées
@@ -130,7 +142,7 @@ INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`) VALU
 --
 ALTER TABLE `reservation`
   ADD CONSTRAINT `fk_nom` FOREIGN KEY (`nom`) REFERENCES `compte` (`nom`),
-  ADD CONSTRAINT `fk_numsalle` FOREIGN KEY (`num_salle`) REFERENCES `salle` (`num`),
+  ADD CONSTRAINT `fk_num_salle` FOREIGN KEY (`num_salle`) REFERENCES `salle` (`id`),
   ADD CONSTRAINT `fk_tel` FOREIGN KEY (`tel`) REFERENCES `compte` (`tel`);
 COMMIT;
 
