@@ -28,7 +28,7 @@
                               <input type="email" name="mail" id="email" placeholder="Votre email"/>
                           </div>
                             <div class="form-group">
-                                <label for="email"></label>
+                                <label for="mdp"></label>
                                 <input type="password" name="mdp" id="mdp" placeholder="Votre nouveau mot de passe"/>
                             </div>
                             <div class="form-group form-button">

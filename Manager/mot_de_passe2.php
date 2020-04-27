@@ -8,13 +8,13 @@ class Manager{
 public function mot_de_passe_oublie($donne){
 //Enregistre les données dans la BDD et rédireige en fonction du résultat //
       $bdd=new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
-    $req=$bdd->prepare('UPDATE compte set mdp = :mdp WHERE email = :email');
-    $req->execute(array('mdp'=>$donne->getmdp(), 'mail'=>$donne->getmail()));
-		//$a = $req->fetchall();
-		if ($req == true){
+    $req = $bdd->prepare('UPDATE compte set mdp = :mdp WHERE mail = :mail');
+    $a = $req->execute(array('mdp'=>md5($donne->getmdp()), 'mail'=>$donne->getmail()));
+
+    if ($a == true){
       header("location: ../index.php");
     }
-    else{
+    else {
 			echo '<body onLoad="alert(\'Erreur\')">';
     }
   }
