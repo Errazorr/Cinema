@@ -11,6 +11,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../Inscription/css/style.css">
+    <link rel="stylesheet" href="../Inscription/scss/common.scss">
+    <link rel="stylesheet" href="../Inscription/css/style2.css">
 </head>
 <body>
 
