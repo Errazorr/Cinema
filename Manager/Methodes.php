@@ -2,6 +2,16 @@
 session_start();
 require_once('../Model/User.php');
 
+// utilisation de service //
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+//Recuperation de données des page suivantes //
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor/autoload.php';
+//
+
 class methode{
   public function connexion(user $connexion){
 
@@ -55,10 +65,29 @@ class methode{
       $req->execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getMail(), $inscription->getTel(), md5($inscription->getMdp()), 'client'));
       $_SESSION['nom'] = $inscription->getNom();
       $_SESSION['prenom'] = $inscription->getPrenom();
-      header('Location: ../Index.php');
+}
+
+$mail = new PHPMailer();
+$mail->isSMTP();                                            // Send using SMTP
+$mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+$mail->Username   = 'yanishverif@gmail.com';                     // SMTP username
+$mail->Password   = 'Yanish93210';                               // SMTP password
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+$mail->Port       = 587;                                    // TCP port to connect to
+
+//Recipients
+$mail->setFrom('yanishverif@gmail.com', 'Inscription');
+$mail->addAddress($inscription->getmail(), 'Inscription');     // Add a recipient //Recipients
+ $mail->Body    =   'Bonjour et bienvenue au palais du cinéma, merci de nous faire confiance';
+if(!$mail->Send()) {
+  echo '<body onLoad="alert(\'Erreur\')">';
+echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
+} else {
+   header("location: ../index.php");
+}
     }
 
-  }
 
 
   public function reservation(reservation $reservation){
