@@ -89,17 +89,35 @@ class methode{
       $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
 
-      $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
-      $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
-      $_SESSION['prix'] = $prix;
-      var_dump($_SESSION['nom']);
-      var_dump($_SESSION['tel']);
-      var_dump($salle);
-      var_dump($prix);
-      var_dump($nb_pers);
-      var_dump($reservation->getDate());
-      var_dump($_SESSION);
-      var_dump($a);
-      //header('Location: ../Index.php');
+      if ($nb_pers == 0) {
+        echo '<body onLoad="alert(\'Entrez le nombre de personnes à aller voir ce film\')">';
+
+        echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
+      }
+
+      else {
+        $requ = $bdd->prepare('SELECT places_restantes FROM salle WHERE film=?');
+        $requ->execute(array($reservation->getFilm()));
+        $places_rest= $requ->fetch(); //Nb de places restantes en fonction du film choisi pendant la réservation
+
+        if ($places_rest >= $nb_pers) {
+          $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
+          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
+          $_SESSION['prix'] = $prix;
+
+          $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
+          $rec = $bdd->prepare('UPDATE salle SET places_restantes=? WHERE film=?');
+          $a = $rec->execute(array($places_rest, $reservation->getFilm()));
+          header('Location: ../Index.php');
+        }
+
+        else {
+          echo '<body onLoad="alert(\'Pas assez de place pour autant de personnes\')">';
+
+          echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
+        }
+      }
+
+
   }
 }
