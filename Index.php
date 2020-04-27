@@ -107,7 +107,7 @@ session_start();
                     <div class="hs-text">
                         <span>Bienvenue au</span>
                         <h2>Palais du cinéma</h2>
-                        <p>Un énorme cinéma sur 5 étages!</p>
+                        <p>Un énorme cinéma sur 3 étages!</p>
                         <a href="#" class="primary-btn">En savoir plus</a>
                     </div>
                 </div>
