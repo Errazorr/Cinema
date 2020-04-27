@@ -28,6 +28,14 @@
 </head>
 
 <body>
+	<?php
+	try{
+		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+	}
+	catch (Exception $e){
+		die('Erreur:'.$e->getMessage());
+	}
+	?>
 	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
@@ -45,10 +53,16 @@
 								<div class="form-group">
 									<span class="form-label">Choisir le film</span>
 									<select class="form-control" name="film" placeholder="Choisissez un film">
-										<option>L'appel de la forêt</option>
-										<option>Sonic le film</option>
-										<option>De Gaulle</option>
-										<option>En Avant Disney</option>
+
+											<?php
+											$req = $bdd->query('SELECT film FROM salle');
+									    $donnees= $req->fetchall();
+
+											foreach ($donnees as $value) {
+												echo '<option>'.$value["film"].'</option>';
+											}
+											?>
+
 									</select>
 								</div>
 								<div class="row">
@@ -68,6 +82,8 @@
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
+												<option>4</option>
+												<option>5</option>
 											</select>
 											<span class="select-arrow"></span>
 										</div>
@@ -80,6 +96,8 @@
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
+												<option>4</option>
+												<option>5</option>
 											</select>
 											<span class="select-arrow"></span>
 										</div>
@@ -92,6 +110,8 @@
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
+												<option>4</option>
+												<option>5</option>
 											</select>
 											<span class="select-arrow"></span>
 										</div>
