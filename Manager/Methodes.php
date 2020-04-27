@@ -61,6 +61,35 @@ class methode{
   }
 
 
+  public function ajouter_admin(user $admin){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('SELECT * FROM compte WHERE mail=? AND role="admin"');
+    $req->execute(array($admin->getMail()));
+    $donnees= $req->fetch();
+
+    if ($donnees) {
+      echo '<body onLoad="alert(\'Administrateur déjà existant\')">';
+
+      echo '<meta http-equiv="refresh" content="0;URL=../View/Ajout_admin.php">';
+    }
+
+    else {
+      $req = $bdd->prepare('INSERT INTO compte (nom, prenom, mail, tel, mdp, role) VALUES (?,?,?,?,?,?)');
+      $req->execute(array($admin->getNom(), $admin->getPrenom(), $admin->getMail(), $admin->getTel(), md5($admin->getMdp()), 'admin'));
+      $_SESSION['nom'] = $admin->getNom();
+      $_SESSION['prenom'] = $admin->getPrenom();
+      header('Location: ../Index.php');
+    }
+
+  }
+
+
   public function reservation(reservation $reservation){
     try{
       $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
