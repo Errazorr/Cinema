@@ -175,7 +175,30 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
           echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
         }
       }
+  }
 
 
+  public function changer_salle(reservation $changer_salle){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('SELECT * FROM salle WHERE num=?');
+    $req->execute(array($changer_salle->getNum_salle()));
+    $donnees= $req->fetch();
+
+    if ($donnees) {
+      echo '<body onLoad="alert(\'Salle déjà prise\')">';
+
+      echo '<meta http-equiv="refresh" content="0;URL=../View/changer_salle.php">';
+    }
+
+    else {
+      $rec = $bdd->prepare('UPDATE salle SET num=? WHERE film=?');
+      $a = $rec->execute(array($changer_salle->getNum_salle(), $changer_salle->getFilm()));
+    }
   }
 }
