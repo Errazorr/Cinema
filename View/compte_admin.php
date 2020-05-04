@@ -54,6 +54,7 @@ session_start();
                             <li><a href="Prochainement.php">Prochainement</a></li>
                           </ul>
                         </li>
+                        <li><a href="voir_reservation.php">Réservations</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="Ajout_admin.php">Ajouter un admin</a></li>
                         <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
