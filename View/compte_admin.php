@@ -54,9 +54,11 @@ session_start();
                             <li><a href="Prochainement.php">Prochainement</a></li>
                           </ul>
                         </li>
-                        <li><a href="voir_reservation.php">Réservations</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="Ajout_admin.php">Ajouter un admin</a></li>
+                        <li><a href="ajout_film.php">Ajouter un film</a></li>
+                        <li><a href="changer_salle.php">Changer un film de salle</a></li>
+                        <li><a href="gestion_clients.php">Gestion des utilisateurs</a></li>
+                        <li><a href="voir_reservation.php">Gestion des réservations</a></li>
+                        <li><a href="Ajout_admin.php">Ajouter un administrateur</a></li>
                         <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
                       </ul>
                     </div>
