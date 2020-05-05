@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 27 avr. 2020 à 10:52
+-- Généré le :  mar. 05 mai 2020 à 08:19
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -21,8 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `cine`
 --
-CREATE DATABASE IF NOT EXISTS `cine` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `cine`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaires`
+--
+
+DROP TABLE IF EXISTS `commentaires`;
+CREATE TABLE IF NOT EXISTS `commentaires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `film` varchar(50) NOT NULL,
+  `com` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fkfilm` (`film`),
+  KEY `fknom` (`nom`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`id`, `nom`, `film`, `com`) VALUES
+(1, 'aa', 'Sonic le film', 'Un excellent film, une belle animation, un bon sens de l\'humour'),
+(2, 'test', 'Sonic le film', 'Très bon film, adapté pour tous, hâte de voir si il sort en 3D'),
+(3, 'aa', 'En Avant Disney', 'Film très mignon, adapté pour tout fan de Disney');
 
 -- --------------------------------------------------------
 
@@ -101,9 +125,9 @@ CREATE TABLE IF NOT EXISTS `reservation` (
 --
 
 INSERT INTO `reservation` (`id`, `nom`, `tel`, `num_salle`, `prix`, `nb_pers`, `date_prevue`) VALUES
-(2, 'aa', '0700000000', 3, 40, 4, '2020-04-29'),
+(2, 'aa', '0700000000', 2, 40, 4, '2020-04-29'),
 (3, 'aa', '0700000000', 6, 48, 5, '2020-05-11'),
-(4, 'test', '0612345678', 3, 56, 6, '2020-04-28');
+(4, 'test', '0612345678', 2, 56, 6, '2020-04-28');
 
 -- --------------------------------------------------------
 
@@ -115,12 +139,13 @@ DROP TABLE IF EXISTS `salle`;
 CREATE TABLE IF NOT EXISTS `salle` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `num` int(11) NOT NULL,
-  `film` text NOT NULL,
+  `film` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `3D` char(3) NOT NULL,
   `nb_places` int(11) UNSIGNED NOT NULL,
   `places_restantes` int(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `film` (`film`),
   KEY `num` (`num`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -130,8 +155,8 @@ CREATE TABLE IF NOT EXISTS `salle` (
 
 INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`, `places_restantes`) VALUES
 (1, 1, 'L\'appel de la foret', 'Le chien Buck vivait depuis quatre ans dans la famille du juge Miller, au Sud des États-Unis, quand il s\'est vu impliqué, malgré lui, dans l\'aventure de la ruée vers l\'or du Nord.', 'non', 50, 50),
-(2, 3, 'Sonic le film', 'Sonic et Tom unissent leurs forces pour tenter d\'empêcher le terrible Dr. Robotnik de capturer Sonic, ce dernier souhaitant utiliser son immense pouvoir pour dominer le monde.', 'non', 100, 90),
-(3, 4, 'De Gaulle', 'La guerre s\'intensifie, l\'armée française s\'effondre, les Allemands seront bientôt à Paris. La panique gagne le gouvernement qui envisage d\'accepter la défaite. Un homme, Charles de Gaulle, fraîchement promu général, veut infléchir le cours de l\'Histoire.', 'non', 50, 50),
+(2, 2, 'Sonic le film', 'Sonic et Tom unissent leurs forces pour tenter d\'empêcher le terrible Dr. Robotnik de capturer Sonic, ce dernier souhaitant utiliser son immense pouvoir pour dominer le monde.', 'non', 100, 90),
+(3, 5, 'De Gaulle', 'La guerre s\'intensifie, l\'armée française s\'effondre, les Allemands seront bientôt à Paris. La panique gagne le gouvernement qui envisage d\'accepter la défaite. Un homme, Charles de Gaulle, fraîchement promu général, veut infléchir le cours de l\'Histoire.', 'non', 50, 50),
 (4, 6, 'En Avant Disney', 'Dans la banlieue d\'un univers imaginaire, deux frères elfes se lancent dans une quête extraordinaire pour découvrir s\'il reste encore un peu de magie dans le monde.', 'oui', 70, 65);
 
 --
@@ -139,12 +164,19 @@ INSERT INTO `salle` (`id`, `num`, `film`, `description`, `3D`, `nb_places`, `pla
 --
 
 --
+-- Contraintes pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD CONSTRAINT `fkfilm` FOREIGN KEY (`film`) REFERENCES `salle` (`film`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fknom` FOREIGN KEY (`nom`) REFERENCES `reservation` (`nom`) ON UPDATE CASCADE;
+
+--
 -- Contraintes pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD CONSTRAINT `fk_nom` FOREIGN KEY (`nom`) REFERENCES `compte` (`nom`),
-  ADD CONSTRAINT `fk_num_salle` FOREIGN KEY (`num_salle`) REFERENCES `salle` (`num`),
-  ADD CONSTRAINT `fk_tel` FOREIGN KEY (`tel`) REFERENCES `compte` (`tel`);
+  ADD CONSTRAINT `fk_nom` FOREIGN KEY (`nom`) REFERENCES `compte` (`nom`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_num_salle` FOREIGN KEY (`num_salle`) REFERENCES `salle` (`num`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_tel` FOREIGN KEY (`tel`) REFERENCES `compte` (`tel`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
