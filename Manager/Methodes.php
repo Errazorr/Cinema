@@ -202,4 +202,24 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
       header('Location: ../View/compte_admin.php');
     }
   }
+
+
+  public function commentaires($commentaires){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $rec = $bdd->prepare('INSERT INTO commentaires (nom, film, com) VALUES (?,?,?)');
+    $a = $rec->execute(array($_SESSION['nom'], $commentaires->getFilm(), $commentaires->getCommentaire()));
+    var_dump($a);
+    var_dump($_SESSION['nom']);
+    var_dump($commentaires->getFilm());
+    var_dump($commentaires->getCommentaire());
+    var_dump($_POST['commentaire']);
+    //header('Location: ../View/compte_client.php');
+
+  }
 }

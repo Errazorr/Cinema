@@ -57,49 +57,16 @@ $role= $req->fetch();
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
                       <ul>
-
-                        <?php
-                        if (isset($_SESSION['mail'])){
-                          if ($role == "client") { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
-                            <li><a href="Nouveaute.php">Film & évènement</a>
-                                <ul class="dropdown">
-                                    <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                    <li><a href="Prochainement.php">Prochainement</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="compte_client.php">Mon compte</a></li>
-                            <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
-                          <?php  }
-
-                           else { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
-                            <li><a href="reservation.php">Réservation</a></li>
-                            <li><a href="Nouveaute.php">Film & évènement</a>
-                                <ul class="dropdown">
-                                    <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                    <li><a href="Prochainement.php">Prochainement</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="compte_admin.php">Mon compte</a></li>
-                            <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
-                        <?php }
-                      }
-                      else{ ?>
-                          <li class="active"><a href="../index.php">Accueil</a></li>
-                          <li><a href="Nouveaute.php">Film & évènement</a>
-                              <ul class="dropdown">
-                                  <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                  <li><a href="Prochainement.php">Prochainement</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="contact.php">Contact</a></li>
-                          <li><a href="Connexion.php">Connexion</a></li>
-
-                        <?php	}  ?>
-
+                        <li class="active"><a href="../index.php">Accueil</a></li>
+                        <li><a href="Nouveaute.php">Film & évènement</a>
+                            <ul class="dropdown">
+                                <li><a href="Nouveaute.php">Nouveauté</a></li>
+                                <li><a href="Prochainement.php">Prochainement</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="commentaires.php">Laisser un commentaire</a></li>
+                        <li><a href="modification_client.php">Modification du compte</a></li>
+                        <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
                       </ul>
                     </div>
                 </div>
@@ -109,6 +76,42 @@ $role= $req->fetch();
     </header>
     <!-- Header End -->
 
+    <!-- About Us Section Begin -->
+    <section class="about-us-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="as-pic">
+                        <img src="../img/loyalty.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="as-text ap-text">
+                        <div class="section-title">
+                            <span>Evolution</span>
+                            <h2>Nous concernant</h2>
+                        </div>
+                        <p class="f-para">Présentation de l'évolution du nombre de nos partenariats ainsi que du nombre de membres fidéliter et pour finir le nombre d'employés.</p>
+                        <div class="about-counter">
+                            <div class="ac-item">
+                                <h2 class="ab-count">100334</h2>
+                                <p>Membre</p>
+                            </div>
+                            <div class="ac-item">
+                                <h2 class="ab-count">156</h2>
+                                <p>Partenariats</p>
+                            </div>
+                            <div class="ac-item">
+                                <h2 class="ab-count">956</h2>
+                                <p>Employés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
 
     <!-- Footer Section Begin -->
     <section class="footer-section">
