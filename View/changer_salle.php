@@ -77,6 +77,7 @@
 								</div>
 								<div class="form-btn">
 									<button class="submit-btn">Changer le film de salle</button>
+									<button class="submit-btn" onclick="window.location.href='compte_admin.php'">Retour</button>
 								</div>
 							</form>
 						</div>
