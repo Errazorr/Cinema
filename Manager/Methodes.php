@@ -199,6 +199,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     else {
       $rec = $bdd->prepare('UPDATE salle SET num=? WHERE film=?');
       $a = $rec->execute(array($changer_salle->getNum_salle(), $changer_salle->getFilm()));
+      header('Location: ../View/compte_admin.php');
     }
   }
 }
