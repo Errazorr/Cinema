@@ -47,55 +47,25 @@
                       </a>
                   </div>
               </div>
-              <div class="col-lg-10 col-md-10">
-                  <div class="main-menu mobile-menu">
-                    <ul>
-
-                      <?php
-                      if (isset($_SESSION['mail'])){
-                        if ($role == "client") { ?>
-                          <li class="active"><a href="../index.php">Accueil</a></li>
-                          <li><a href="Nouveaute.php">Film & évènement</a>
-                              <ul class="dropdown">
-                                  <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                  <li><a href="Prochainement.php">Prochainement</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="contact.php">Contact</a></li>
-                          <li><a href="compte_client.php">Mon compte</a></li>
-                          <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
-                        <?php  }
-
-                         else { ?>
-                          <li class="active"><a href="../index.php">Accueil</a></li>
-                          <li><a href="reservation.php">Réservation</a></li>
-                          <li><a href="Nouveaute.php">Film & évènement</a>
-                              <ul class="dropdown">
-                                  <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                  <li><a href="Prochainement.php">Prochainement</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="contact.php">Contact</a></li>
-                          <li><a href="compte_admin.php">Mon compte</a></li>
-                          <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
-                      <?php }
-                    }
-                    else{ ?>
-                        <li class="active"><a href="../index.php">Accueil</a></li>
-                        <li><a href="Nouveaute.php">Film & évènement</a>
-                            <ul class="dropdown">
-                                <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                <li><a href="Prochainement.php">Prochainement</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="Connexion.php">Connexion</a></li>
-
-                      <?php	}  ?>
-
-                    </ul>
-                  </div>
-              </div>
+							<div class="col-lg-10 col-md-10">
+									<div class="main-menu mobile-menu">
+										<ul>
+											<li class="active"><a href="../index.php">Accueil</a></li>
+											<li><a href="Nouveaute.php">Film & évènement</a>
+												<ul class="dropdown">
+													<li><a href="Nouveaute.php">Nouveauté</a></li>
+													<li><a href="Prochainement.php">Prochainement</a></li>
+												</ul>
+											</li>
+											<li><a href="ajout_film.php">Ajouter un film</a></li>
+											<li><a href="changer_salle.php">Changer un film de salle</a></li>
+											<li><a href="gestion_clients.php">Gestion des utilisateurs</a></li>
+											<li><a href="voir_reservation.php">Gestion des réservations</a></li>
+											<li><a href="Ajout_admin.php">Ajouter un administrateur</a></li>
+											<li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
+										</ul>
+									</div>
+							</div>
           </div>
           <div id="mobile-menu-wrap"></div>
       </div>
