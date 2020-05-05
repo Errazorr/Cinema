@@ -214,12 +214,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
 
     $rec = $bdd->prepare('INSERT INTO commentaires (nom, film, com) VALUES (?,?,?)');
     $a = $rec->execute(array($_SESSION['nom'], $commentaires->getFilm(), $commentaires->getCommentaire()));
-    var_dump($a);
-    var_dump($_SESSION['nom']);
-    var_dump($commentaires->getFilm());
-    var_dump($commentaires->getCommentaire());
-    var_dump($_POST['commentaire']);
-    //header('Location: ../View/compte_client.php');
+    header('Location: ../View/compte_client.php');
 
   }
 }
