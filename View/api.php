@@ -2,8 +2,8 @@
 include("fonction_api.php");
 $requete = construit_url_paypal();
 $requete = $requete."&METHOD=SetExpressCheckout".
-			"&CANCELURL=".urlencode("http://127.0.0.1/cancel.php").
-			"&RETURNURL=".urlencode("http://127.0.0.1/return.php").
+			"&CANCELURL=".urlencode("cancel.php").
+			"&RETURNURL=".urlencode("return.php").
 			"&AMT=10.0".
 			"&CURRENCYCODE=EUR".
 			"&DESC=".urlencode("Magnifique oeuvre d'art (que mon fils de 3 ans a peint.)").

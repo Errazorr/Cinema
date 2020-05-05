@@ -1,12 +1,12 @@
 <?php
   function construit_url_paypal()
   {
-	$api_paypal = 'https://api-3t.sandbox.paypal.com/nvp?'; // Site de l'API PayPal. On ajoute déjà le ? afin de concaténer directement les paramètres.
+	$api_paypal = 'https://openclassrooms.com/fr/courses/483282-paiement-en-ligne-par-paypal/482633-integration-dans-php#/id/r-482616'; // Site de l'API PayPal. On ajoute déjà le ? afin de concaténer directement les paramètres.
 	$version = 57.0; // Version de l'API
 
-	$user = 'vendeur_1236594550_biz_api1.siteduzero.com'; // Utilisateur API
-	$pass = 'SEFYITJFG8QRHN1S'; // Mot de passe API
-	$signature = 'ZWg4tSHZZ0GQIK8U6VKGWO1mxrtOAJzAGFNRnFpDWRKX-fv8q5Tuj64n'; // Signature de l'API
+	$user = 'yanishverif_api1.gmail.com'; // Utilisateur API
+	$pass = 'QSNHLLCT8446WFJ6'; // Mot de passe API
+	$signature = 'Az67jetBw42PJZWqdxG9HZqIFcpZAOiSym3HiPHa3gP4IJ0tlMN0pvFv'; // Signature de l'API
 
 	$api_paypal = $api_paypal.'VERSION='.$version.'&USER='.$user.'&PWD='.$pass.'&SIGNATURE='.$signature; // Ajoute tous les paramètres
 
