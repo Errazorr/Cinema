@@ -1,0 +1,13 @@
+.container {
+    margin-top: 120px;
+    margin-bottom: 70px;
+    width: 1123px;
+    padding-top: 219px;
+    padding-bottom: 165px;
+    // padding: 150px 0;
+    // background: rgba(177,135,87, 0.75);
+    background-image: url('../images/container-bg.png');
+    background-repeat: no-repeat;
+    @include background-size(cover);
+    overflow: hidden;
+}
