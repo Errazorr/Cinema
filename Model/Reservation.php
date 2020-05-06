@@ -11,6 +11,7 @@ class reservation extends user{
   private $_ado;
   private $_enfant;
   private $_commentaire;
+  private $_reservation;
 
   public function __construct(array $donnees){
     $this->hydrate($donnees);
@@ -57,6 +58,10 @@ class reservation extends user{
     $this->_commentaire = $commentaire;
   }
 
+  public function setReservation ($reservation){
+    $this->_reservation = $reservation;
+  }
+
   public function getDate(){return $this->_date;}
   public function getPers(){return $this->_pers;}
   public function getFilm(){return $this->_film;}
@@ -65,6 +70,7 @@ class reservation extends user{
   public function getAdo(){return $this->_ado;}
   public function getEnfant(){return $this->_enfant;}
   public function getCommentaire(){return $this->_commentaire;}
+  public function getReservation(){return $this->_reservation;}
 }
 
 ?>

@@ -132,18 +132,9 @@ class methode{
     $req->execute(array($_SESSION['nom']));
     $donnees= $req->fetch();
 
-      if ($reservation->getFilm() == 'L\'appel de la forêt') {
-        $salle = 1;
-      }
-      if ($reservation->getFilm() == 'Sonic le film') {
-        $salle = 2;
-      }
-      if ($reservation->getFilm() == 'De Gaulle') {
-        $salle = 3;
-      }
-      if ($reservation->getFilm() == 'En Avant Disney') {
-        $salle = 4;
-      }
+    $req = $bdd->prepare('SELECT num FROM salle WHERE film=?');
+    $req->execute(array($reservation->getFilm()));
+    $salle= $req->fetch();
 
       $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
@@ -159,15 +150,18 @@ class methode{
         $requ->execute(array($reservation->getFilm()));
         $places_rest= $requ->fetch(); //Nb de places restantes en fonction du film choisi pendant la réservation
 
+        $reserv = $_SESSION['nom']."/".$reservation->getFilm()."/".$reservation->getDate();
+
         if ($places_rest >= $nb_pers) {
-          $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
-          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
+          $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue, reservation) VALUES (?,?,?,?,?,?,?)');
+          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle[0], $prix, $nb_pers, $reservation->getDate(), $reserv));
           $_SESSION['prix'] = $prix;
 
           $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
           $rec = $bdd->prepare('UPDATE salle SET places_restantes=? WHERE film=?');
-          $a = $rec->execute(array($places_rest, $reservation->getFilm()));
-          header('Location: ../Index.php');
+          $b = $rec->execute(array($places_rest, $reservation->getFilm()));
+
+          //header('Location: ../Index.php');
         }
 
         else {
@@ -233,4 +227,26 @@ class methode{
     header('Location: ../View/compte_client.php');
   }
 
+
+  public function modif_reservation(reservation $modif_reservation){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('SELECT num FROM salle WHERE film=?');
+    $req->execute(array($modif_reservation->getFilm()));
+    $salle= $req->fetch();
+
+    $req = $bdd->prepare('UPDATE reservation SET num_salle=?, date_prevue=? WHERE reservation=?');
+    $req->execute(array($salle[0], $modif_reservation->getDate(), $modif_reservation->getReservation()));
+
+    $reserv = $_SESSION['nom']."/".$modif_reservation->getFilm()."/".$modif_reservation->getDate();
+
+    $req = $bdd->prepare('UPDATE reservation SET reservation=? WHERE num_salle=? AND date_prevue=?');
+    $req->execute(array($reserv, $salle[0], $modif_reservation->getDate()));
+    header('Location: ../View/voir_reservation.php');
+  }
 }

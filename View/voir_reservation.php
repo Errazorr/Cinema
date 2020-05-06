@@ -130,10 +130,10 @@
 				</div>
 				<div class="row">
 				        <div class="col-md-6 register">
-				           <center><button type="button" class="btn btn-danger btn-lg">button</button></center>
+				           <center><button type="button" class="btn btn-outline-danger btn-lg" onclick="window.location.href='modifier_reservation.php'">Modifier</button></center>
 				        </div>
 				        <div class="col-md-6 register">
-				           <center><button type="button" class="btn btn-outline-danger btn-lg">button</button></center>
+				           <center><button type="button" class="btn btn-outline-danger btn-lg" onclick="window.location.href='supprimer_reservation.php'">Supprimer</button></center>
 				        </div>
 			</div>
 		</div>
