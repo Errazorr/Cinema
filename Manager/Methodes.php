@@ -66,28 +66,28 @@ class methode{
       $req->execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getMail(), $inscription->getTel(), md5($inscription->getMdp()), 'client'));
       $_SESSION['nom'] = $inscription->getNom();
       $_SESSION['prenom'] = $inscription->getPrenom();
-}
 
-$mail = new PHPMailer();
-$mail->isSMTP();                                            // Send using SMTP
-$mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-$mail->Username   = 'yanishverif@gmail.com';                     // SMTP username
-$mail->Password   = 'Yanish93210';                               // SMTP password
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-$mail->Port       = 587;                                    // TCP port to connect to
+      $mail = new PHPMailer();
+      $mail->isSMTP();                                            // Send using SMTP
+      $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+      $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+      $mail->Username   = 'yanishverif@gmail.com';                     // SMTP username
+      $mail->Password   = 'Yanish93210';                               // SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+      $mail->Port       = 587;                                    // TCP port to connect to
 
-//Recipients
-$mail->setFrom('yanishverif@gmail.com', 'Inscription');
-$mail->addAddress($inscription->getmail(), 'Inscription');     // Add a recipient //Recipients
- $mail->Body    =   'Bonjour et bienvenue au palais du cinéma, merci de nous faire confiance';
-if(!$mail->Send()) {
-  echo '<body onLoad="alert(\'Erreur\')">';
-echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
-} else {
-   header("location: ../index.php");
+      //Recipients
+      $mail->setFrom('yanishverif@gmail.com', 'Inscription');
+      $mail->addAddress($inscription->getmail(), 'Inscription');     // Add a recipient //Recipients
+       $mail->Body    =   'Bonjour et bienvenue au palais du cinéma, merci de nous faire confiance';
+      if(!$mail->Send()) {
+        echo '<body onLoad="alert(\'Erreur\')">';
+      echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
+      } else {
+         header("location: ../index.php");
+      }
+          }
 }
-    }
 
 
 
@@ -218,4 +218,19 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     header('Location: ../View/compte_client.php');
 
   }
+
+
+  public function modification($modification){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $rec = $bdd->prepare('UPDATE compte SET mail=?, tel=?, mdp=? WHERE nom=? AND prenom=?');
+    $a = $rec->execute(array($modification->getMail(), $modification->getTel(), $modification->getMdp(), $_SESSION['nom'], $_SESSION['prenom']));
+    header('Location: ../View/compte_client.php');
+  }
+
 }

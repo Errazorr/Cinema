@@ -10,9 +10,6 @@ try{
 catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
-$req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
-//$req->execute(array($_SESSION['mail']));//
-$role= $req->fetch();
  ?>
 
 <head>
