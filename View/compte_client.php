@@ -61,6 +61,7 @@ catch (Exception $e){
                                 <li><a href="Prochainement.php">Prochainement</a></li>
                             </ul>
                         </li>
+                        <li><a href="reservation_client.php">Mes réservations</a></li>
                         <li><a href="commentaires.php">Laisser un commentaire</a></li>
                         <li><a href="modification_client.php">Modification du compte</a></li>
                         <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
