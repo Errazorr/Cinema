@@ -24,6 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="../tableau/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../tableau/css/main.css">
   <link rel="stylesheet" type="text/css" href="../tableau/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../tableau/css/style2.css">
 
 <!--===============================================================================================-->
 
