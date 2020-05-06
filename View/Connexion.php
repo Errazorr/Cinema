@@ -11,6 +11,7 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="../connexion/css/style.css">
+    <link rel="stylesheet" href="../connexion/css/style2.css">
 </head>
 <body>
 
