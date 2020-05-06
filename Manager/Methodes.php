@@ -27,6 +27,7 @@ class methode{
 
     if ($donnees['mail'] == $connexion->getMail() AND $donnees['mdp'] == md5($connexion->getMdp())) {
       $_SESSION['nom'] = $donnees['nom'];
+      $_SESSION['prenom'] = $donnees['prenom'];
       $_SESSION['tel'] = $donnees['tel'];
       $_SESSION['mail'] = $connexion->getMail();
       $_SESSION['role'] = $donnees['role'];
