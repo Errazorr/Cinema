@@ -36,6 +36,8 @@
 <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
+<style>
+</style>
 <body>
 
 	<?php
@@ -86,7 +88,6 @@
 
 		<div class="container-table100">
 			<div class="wrap-table100">
-
         <div class="table100 ver3 m-b-110">
 					<div class="table100-head">
 						<table>
@@ -123,12 +124,17 @@
 								?>
 
 
-
-
 							</tbody>
 						</table>
 					</div>
 				</div>
+				<div class="row">
+				        <div class="col-md-6 register">
+				           <center><button type="button" class="btn btn-danger btn-lg">button</button></center>
+				        </div>
+				        <div class="col-md-6 register">
+				           <center><button type="button" class="btn btn-outline-danger btn-lg">button</button></center>
+				        </div>
 			</div>
 		</div>
 	</div>
