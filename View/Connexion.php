@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Se connecter</title>
 
-    <!-- Font Icon -->
+    <!-- Icon de connexion -->
     <link rel="stylesheet" href="../connexion/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- Main css -->
+    <!-- Liens contenant le style de la page  -->
     <link rel="stylesheet" href="../connexion/css/style.css">
     <link rel="stylesheet" href="../connexion/css/style2.css">
 </head>
 <body>
 
+  <!-- Formulaire de connexion  -->
     <div class="main">
 
         <div class="container">
@@ -41,8 +42,8 @@
 
     </div>
 
-    <!-- JS -->
+    <!-- liens contetant le script de la page -->
     <script src="../connexion/vendor/jquery/jquery.min.js"></script>
     <script src="../connexion/js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

@@ -9,7 +9,7 @@
     <!-- logo -->
     <link rel="stylesheet" href="../Inscription/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- css -->
+    <!-- Liens contenant le style de la page -->
     <link rel="stylesheet" href="../Inscription/css/style.css">
     <link rel="stylesheet" href="../Inscription/scss/common.scss">
     <link rel="stylesheet" href="../Inscription/css/style2.css">
@@ -69,7 +69,7 @@
 
     </div>
 <!-- Fin du formulaire -->
-    <!-- Début du JS -->
+    <!-- Liens contetant le script de la page -->
     <script src="../Inscription/vendor/jquery/jquery.min.js"></script>
     <script src="../Inscription/js/main.js"></script>
 </body><!-- fin -->

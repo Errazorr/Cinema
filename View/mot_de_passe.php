@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inscription</title>
 
-    <!-- Font Icon -->
+    <!-- Logo -->
     <link rel="stylesheet" href="../inscription/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- Main css -->
+    <!-- Lien contenant le style de la page -->
     <link rel="stylesheet" href="../inscription/css/style.css">
 </head>
 <body>
 
     <div class="main">
 
-        <!-- Sign up form -->
+        <!-- Affichage du formulaire pour le mot de passe oublier -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -40,9 +40,11 @@
         </section>
 
     </div>
+    <!-- Fin du formulaire -->
 
-    <!-- JS -->
+
+    <!-- Liens contenant le script de la page -->
     <script src="../Inscription/vendor/jquery/jquery.min.js"></script>
     <script src="../Inscription/js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

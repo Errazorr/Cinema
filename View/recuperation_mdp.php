@@ -9,14 +9,14 @@
     <!-- Logo-->
     <link rel="stylesheet" href="../inscription/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- css -->
+    <!-- Lien contenant le style de la page -->
     <link rel="stylesheet" href="../inscription/css/style.css">
 </head>
 <body>
 
     <div class="main">
 
-        <!-- Début du formulaire  -->
+        <!-- Affichage du formulaire de récupération de mot de passe -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
