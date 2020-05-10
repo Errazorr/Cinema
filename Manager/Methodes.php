@@ -275,4 +275,18 @@ class methode{
       header('Location: ../View/compte_admin.php');
     }
   }
+
+
+  public function suppr_reservation(reservation $suppr_reservation){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('DELETE FROM reservation WHERE reservation=?');
+    $req->execute(array($suppr_reservation->getReservation()));
+    header('Location: ../View/voir_reservation.php');
+  }
 }
