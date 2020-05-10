@@ -309,23 +309,6 @@ session_start();
     </section>
     <!-- Testimonial Section End -->
 
-    <!-- Call To Action Section Begin -->
-    <section class="callto-section set-bg" data-setbg="img/ctc-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 m-auto">
-                    <div class="ctc-text">
-                        <h2>La fête du cinéma</h2>
-                        <p>Pour cette année, la fête du cinéma aura lieu du 28 juin au 1er juillet 2020. En attendant, place au Printemps
-                          du Cinéma du 29 au 31 mars !</p>
-                        <a href="http://www.feteducinema.com/" class="primary-btn ctc-btn">En savoir plus !</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Section End -->
-
     <!-- Member Section Begin -->
     <section class="member-section spad">
         <div class="container">
@@ -476,10 +459,29 @@ session_start();
                     <div class="footer-widget fw-links">
                         <h5>Informations</h5>
                         <ul>
-                            <li><a href="View/reservation.php">Reservation</a></li>
-                            <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/Connexion.php">Connexion</a></li>
-                            <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+
+                          <?php
+                          if (isset($_SESSION['mail'])){
+                            if ($_SESSION['role'] == "client") { ?>
+                              <li><a href="View/reservation.php">Reservation</a></li>
+                              <li><a href="View/contact.php">Contact</a></li>
+                              <li><a href="../session_destroy.php">Déconnexion</a></li>
+                              <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                            <?php  }
+
+                             else { ?>
+                               <li><a href="View/voir_reservation.php">Reservations</a></li>
+                               <li><a href="View/contact.php">Contact</a></li>
+                               <li><a href="../session_destroy.php">Déconnexion</a></li>
+                               <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                          <?php }
+                        }
+                        else{ ?>
+                          <li><a href="View/contact.php">Contact</a></li>
+                          <li><a href="View/Connexion.php">Connexion</a></li>
+                          <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+
+                          <?php	}  ?>
                         </ul>
                     </div>
                 </div>
