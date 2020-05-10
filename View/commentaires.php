@@ -66,11 +66,9 @@
 									</select>
 								</div>
 								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Entrez votre commentaire</span>
-											<input class="form-control" type="textarea" name="commentaire" placeholder="Votre commentaire" required>
-										</div>
+									<div class="form-group">
+										<span class="form-label">Entrez un commentaire</span>
+										<input class="form-control" type="textarea" name="commentaire" placeholder="Laissez un commentaire" required>
 									</div>
 								</div>
 								<div class="form-btn">

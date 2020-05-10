@@ -51,31 +51,28 @@
 						<div class="booking-form">
 							<form method="POST" action="../Traitement/commentaires.php">
 								<div class="form-group">
-									<span class="form-label">Choisir le film</span>
-									<select class="form-control" name="film" placeholder="Choisissez un film">
-
-											<?php
-											$req = $bdd->query('SELECT film FROM salle');
-									    $donnees= $req->fetchall();
-
-											foreach ($donnees as $value) {
-												echo '<option>'.$value["film"].'</option>';
-											}
-											?>
-
-									</select>
+									<span class="form-label">Entrez le nom du film</span>
+									<input class="form-control" type="text" name="film" placeholder="Nom du film" required>
 								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Entrez votre commentaire</span>
-											<input class="form-control" type="textarea" name="commentaire" placeholder="Votre commentaire" required>
-										</div>
-									</div>
+								<div class="form-group">
+									<span class="form-label">Entrez une description</span>
+									<input class="form-control" type="textarea" name="description" placeholder="Description du film" required>
+								</div>
+								<div class="form-group">
+									<span class="form-label">Le film est disponibles en 3D?</span>
+									<input class="form-control" type="text" name="3d" placeholder="Oui/Non" required>
+								</div>
+								<div class="form-group">
+									<span class="form-label">Entrez la salle dans laquelle sera le film</span>
+									<input class="form-control" type="text" name="salle" placeholder="Numéro de la salle" required>
+								</div>
+								<div class="form-group">
+									<span class="form-label">Combien de places pour ce film?</span>
+									<input class="form-control" type="text" name="places" placeholder="Nombre de places disponibles" required>
 								</div>
 								<div class="form-btn">
-									<button class="submit-btn">Laisser un commentaire</button>
-									<button class="submit-btn" onclick="window.location.href='compte_client.php'">Retour</button>
+									<button class="submit-btn">Enregistrer</button>
+									<button class="submit-btn" onclick="window.location.href='compte_admin.php'">Retour</button>
 								</div>
 							</form>
 						</div>
