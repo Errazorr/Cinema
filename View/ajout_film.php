@@ -42,9 +42,8 @@
 				<div class="row">
 					<div class="col-md-7 col-md-push-5">
 						<div class="booking-cta">
-							<h1>Commentaires</h1>
-							<p>Laissez donc un petit commentaire sur le film que vous venez de voir. Faites nous savoir ce que vous en avez pensé.
-							</p>
+							<h1>Ajout d'un film</h1>
+							
 						</div>
 					</div>
 					<div class="col-md-4 col-md-pull-7">
