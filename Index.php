@@ -309,23 +309,6 @@ session_start();
     </section>
     <!-- Testimonial Section End -->
 
-    <!-- Call To Action Section Begin -->
-    <section class="callto-section set-bg" data-setbg="img/ctc-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 m-auto">
-                    <div class="ctc-text">
-                        <h2>La fête du cinéma</h2>
-                        <p>Pour cette année, la fête du cinéma aura lieu du 28 juin au 1er juillet 2020. En attendant, place au Printemps
-                          du Cinéma du 29 au 31 mars !</p>
-                        <a href="http://www.feteducinema.com/" class="primary-btn ctc-btn">En savoir plus !</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Section End -->
-
     <!-- Member Section Begin -->
     <section class="member-section spad">
         <div class="container">
