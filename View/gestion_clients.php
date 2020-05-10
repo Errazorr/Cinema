@@ -124,10 +124,10 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 register">
-						 <center><button type="button" class="btn btn-outline-danger btn-lg">Modifier</button></center>
+						 <center><button type="button" class="btn btn-outline-danger btn-lg" onclick="window.location.href='choix_client.php'">Modifier</button></center>
 					</div>
 					<div class="col-md-6 register">
-						 <center><button type="button" class="btn btn-outline-danger btn-lg">Supprimer</button></center>
+						 <center><button type="button" class="btn btn-outline-danger btn-lg" onclick="window.location.href='supprimer_client.php'">Supprimer</button></center>
 					</div>
 			</div>
 			</div>
