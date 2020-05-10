@@ -47,10 +47,10 @@
 					</div>
 					<div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form method="POST" action="../Traitement/supprimer_reservation.php">
+							<form method="POST" action="../Traitement/supprimer_client.php">
 								<div class="form-group">
-									<span class="form-label">Choisir la personne à supprimer</span>
-									<select class="form-control" name="client" placeholder="Choisissez un film">
+									<span class="form-label">Choisir le nom de la personne à supprimer</span>
+									<select class="form-control" name="nom" placeholder="Choisissez un film">
 
 											<?php
 											$req = $bdd->query('SELECT nom FROM compte WHERE role="Client"');
@@ -58,6 +58,22 @@
 
 											foreach ($donnees as $value) {
 												echo '<option>'.$value["nom"].'</option>';
+											}
+											?>
+
+									</select>
+								</div>
+
+                <div class="form-group">
+									<span class="form-label">Choisir le prénom de la personne à supprimer</span>
+									<select class="form-control" name="prenom" placeholder="Choisissez un film">
+
+											<?php
+											$req = $bdd->query('SELECT prenom FROM compte WHERE role="Client"');
+									    $donnees= $req->fetchall();
+
+											foreach ($donnees as $value) {
+												echo '<option>'.$value["prenom"].'</option>';
 											}
 											?>
 

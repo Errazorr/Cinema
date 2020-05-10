@@ -303,4 +303,18 @@ class methode{
     $req->execute(array($modification_client->getNom(), $modification_client->getPrenom(), $modification_client->getMail(), $modification_client->getTel(), $_SESSION['id']));
     header('Location: ../View/gestion_clients.php');
   }
+
+
+  public function suppr_client(user $suppr_client){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('DELETE FROM compte WHERE nom=? AND prenom=?');
+    $req->execute(array($suppr_client->getNom(), $suppr_client->getPrenom()));
+    header('Location: ../View/gestion_clients.php');
+  }
 }
