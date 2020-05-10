@@ -72,7 +72,7 @@
 									</div>
 								</div>
 								<div class="form-btn">
-									<button class="submit-btn">Laisser un commentaire</button>
+									<button class="submit-btn">Valider</button>
 									<button class="submit-btn" onclick="window.location.href='compte_client.php'">Retour</button>
 								</div>
 							</form>

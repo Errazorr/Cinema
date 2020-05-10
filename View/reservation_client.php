@@ -58,16 +58,14 @@
 										<ul>
 											<li class="active"><a href="../index.php">Accueil</a></li>
 											<li><a href="Nouveaute.php">Film & évènement</a>
-												<ul class="dropdown">
-													<li><a href="Nouveaute.php">Nouveauté</a></li>
-													<li><a href="Prochainement.php">Prochainement</a></li>
-												</ul>
+													<ul class="dropdown">
+															<li><a href="Nouveaute.php">Nouveauté</a></li>
+															<li><a href="Prochainement.php">Prochainement</a></li>
+													</ul>
 											</li>
-											<li><a href="ajout_film.php">Ajouter un film</a></li>
-											<li><a href="changer_salle.php">Changer un film de salle</a></li>
-											<li><a href="gestion_clients.php">Gestion des utilisateurs</a></li>
-											<li><a href="voir_reservation.php">Gestion des réservations</a></li>
-											<li><a href="Ajout_admin.php">Ajouter un administrateur</a></li>
+											<li><a href="reservation_client.php">Mes réservations</a></li>
+											<li><a href="commentaires.php">Laisser un commentaire</a></li>
+											<li><a href="modification_client.php">Modification du compte</a></li>
 											<li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
 										</ul>
 									</div>
