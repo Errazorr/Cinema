@@ -19,9 +19,10 @@ public function contact($donnee){
     $req=$bdd->prepare('INSERT into contact (nom, mail, message) VALUES(:nom, :mail, :message)');
     $req->execute(array('nom'=>$donnee->getnom(), 'mail'=>$donnee->getmail(), 'message'=>$donnee->getmessage()));
     $a=$req->fetchall();
+    // Si la requete s'execute alors on redirige vers une page//
     if ($req ==true){
       header("location: ../index.php");
-    }
+    }   // Si la requete ne s'execute pas alors on redirige vers une autre page// 
     else{
       header("location: ../View/contact.php");
     }

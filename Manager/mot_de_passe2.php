@@ -1,4 +1,5 @@
 <?php
+//Récupération des données //
 $mail= $_POST['mail'];
 $mdp=md5($_POST['mdp']);
 // envoie les données vers les page suiavntes //
@@ -11,10 +12,10 @@ public function mot_de_passe_oublie($donne){
     $req = $bdd->prepare('UPDATE compte set mdp = :mdp WHERE mail = :mail');
     $a = $req->execute(array('mdp'=>md5($donne->getmdp()), 'mail'=>$donne->getmail()));
 
-    if ($a == true){
+    if ($a == true){// Si la requete s'execute alors on redirige vers une autre page//
       header("location: ../index.php");
     }
-    else {
+    else { // Si la requete ne s'execute pas alors on redirige vers une autre page//
 			echo '<body onLoad="alert(\'Erreur\')">';
     }
   }

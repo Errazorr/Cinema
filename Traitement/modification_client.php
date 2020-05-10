@@ -1,4 +1,5 @@
 <?php
+// Envoie des données vers les pages suivantes //
 require '../Model/user.php';
 require '../Manager/Methodes.php';
 

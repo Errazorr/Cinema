@@ -1,5 +1,5 @@
 <?php
-//utilisation des services suiavnt //
+//utilisation des services suivant //
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 //Récuperation des données sur les pages suivantes //
@@ -15,6 +15,7 @@ require '../vendor/autoload.php';
     $req->execute(array('mail'=>$mail));
     $connexion = $req->fetch();
 
+    // Envoie des données à l'adresse mail //
     $mail = new PHPMailer();
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
@@ -29,10 +30,12 @@ require '../vendor/autoload.php';
     $mail->addAddress($mail, 'Contact');     // Add a recipient //Recipients
      $mail->Body    =   'Merci de vous etre inscrit a la Newsletter vous aurait accées à toute les nouveautés nous concernant';
 $mail->send();
+
+// Si l'envoie de mail s'effectue alors on redirige vers une page //
     if ($connexion == true){
       header("location: ../index.php");
     }
-    else{
+    else{ // Si l'envoie de mail ne s'effectue pas alors on affiche une erreur //
       echo '<body onLoad="alert(\'Mail ou Mot de passe incorrect\')">';
   echo '<meta http-equiv="refresh" content="0;URL=../index.php">';
     }

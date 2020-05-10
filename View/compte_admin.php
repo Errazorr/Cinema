@@ -13,11 +13,11 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Palais du cinéma</title>
 
-    <!-- Google Font -->
+    <!-- Logo -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
-    <!-- Css Styles -->
+    <!-- Liens contenant le Styles de la page -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
@@ -28,12 +28,12 @@ session_start();
 </head>
 
 <body>
-    <!-- Page Preloder -->
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+    <!-- Affichage de la navbar -->
     <header class="header-section">
         <div class="container">
             <div class="row">
@@ -67,9 +67,9 @@ session_start();
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- Fin de la navbar -->
 
-    <!-- About Us Section Begin -->
+    <!-- Présentation de l'entreprise -->
     <section class="about-us-section spad">
         <div class="container">
             <div class="row">
@@ -104,9 +104,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- About Us Section End -->
+    <!-- Fin de la présenation -->
 
-    <!-- Footer Section Begin -->
+    <!-- Affichage du pied de page -->
     <section class="footer-section">
         <div class="container">
             <div class="row">
@@ -165,14 +165,14 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div class="copyright-text"><p><!-- Copyright -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+</p></div>
         </div>
     </section>
-    <!-- Footer Section End -->
+    <!-- Fin du pied de page -->
 
-    <!-- Js Plugins -->
+    <!-- Liens contenant le script de la page-->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
