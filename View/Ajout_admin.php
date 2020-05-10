@@ -9,7 +9,7 @@
     <!-- logo -->
     <link rel="stylesheet" href="../Inscription/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- css -->
+    <!-- Liens contenant le style de la page -->
     <link rel="stylesheet" href="../Inscription/css/style.css">
     <link rel="stylesheet" href="../Inscription/scss/common.scss">
     <link rel="stylesheet" href="../Inscription/css/style2.css">
@@ -18,7 +18,7 @@
 
     <div class="main">
 
-        <!-- Début du formulaire -->
+        <!-- Début du formulaire permettant d'ajouter un administrateur -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -69,8 +69,8 @@
 
     </div>
 <!-- Fin du formulaire -->
-    <!-- Début du JS -->
+    <!-- Liens contenant le script de la page -->
     <script src="../Inscription/vendor/jquery/jquery.min.js"></script>
     <script src="../Inscription/js/main.js"></script>
-</body><!-- fin -->
+</body>
 </html>

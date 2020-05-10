@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Test de connexion a la bdd -->
 <?php
 session_start();
 
@@ -11,7 +11,7 @@ catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 
-
+//Sélection du nom ainsi que du prénom //
 $req = $bdd->prepare('SELECT * FROM compte WHERE nom=? AND prenom=?');
 $req->execute(array($_SESSION['nom'], $_SESSION['prenom']));
 $donnees= $req->fetch();
@@ -26,7 +26,7 @@ $donnees= $req->fetch();
     <!-- logo -->
     <link rel="stylesheet" href="../Inscription/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-    <!-- css -->
+    <!-- Liens contenant le style de page -->
     <link rel="stylesheet" href="../Inscription/css/style.css">
     <link rel="stylesheet" href="../Inscription/scss/common.scss">
     <link rel="stylesheet" href="../Inscription/css/style2.css">
@@ -35,7 +35,7 @@ $donnees= $req->fetch();
 
     <div class="main">
 
-        <!-- Début du formulaire -->
+        <!-- Début du formulaire de modification_client-->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -82,8 +82,10 @@ $donnees= $req->fetch();
 
     </div>
 <!-- Fin du formulaire -->
-    <!-- Début du JS -->
+
+    <!-- Liens contenant le script de la page -->
     <script src="../Inscription/vendor/jquery/jquery.min.js"></script>
     <script src="../Inscription/js/main.js"></script>
-</body><!-- fin -->
+    <!-- fin du script -->
+</body>
 </html>

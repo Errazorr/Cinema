@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+<!-- Test de connexion à la bdd -->
 <?php
 session_start();
 
@@ -10,7 +11,7 @@ catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 $req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
-//$req->execute(array($_SESSION['mail']));//
+// Sélection du role//
 $role= $req->fetch();
  ?>
 <head>
@@ -21,11 +22,11 @@ $role= $req->fetch();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hazze | Template</title>
 
-    <!-- Google Font -->
+    <!-- Logo -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
-    <!-- Css Styles -->
+    <!-- Liens contenant le style de la page -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
@@ -36,12 +37,11 @@ $role= $req->fetch();
 </head>
 
 <body>
-    <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+    <!-- Affichage de la navbar  -->
     <header class="header-section">
         <div class="container">
             <div class="row">
@@ -56,6 +56,7 @@ $role= $req->fetch();
                     <div class="main-menu mobile-menu">
                       <ul>
 
+                        <!-- Changement de la navbar en fonction du role -->
                         <?php
                         if (isset($_SESSION['mail'])){
                           if ($role == "client") { ?>
@@ -105,9 +106,9 @@ $role= $req->fetch();
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- Fin de la navbar -->
 
-    <!-- Blog Section Begin -->
+    <!-- Afficage des nouveau films ainsi que la descrption ce ces film-->
     <div class="blog-section spad">
         <div class="container">
             <div class="row">
@@ -267,9 +268,9 @@ $role= $req->fetch();
             </div>
         </div>
     </div>
-    <!-- Blog Section End -->
+    <!-- Fin de l'affichage des nouveau film  -->
 
-    <!-- Footer Section Begin -->
+    <!-- Affichage du pied de page -->
     <section class="footer-section">
         <div class="container">
             <div class="row">
@@ -328,14 +329,14 @@ $role= $req->fetch();
                     </div>
                 </div>
             </div>
-            <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div class="copyright-text"><p><!-- Copyright -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+</p></div>
         </div>
     </section>
-    <!-- Footer Section End -->
+    <!-- Fin du pied de page  -->
 
-    <!-- Js Plugins -->
+    <!-- Liens contenant le script de la page -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>

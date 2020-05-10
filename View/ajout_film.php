@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ajouter un film</title>
 
-  <!-- Css Styles -->
+  <!-- Liens contenant le style de la page  -->
   <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <!-- Header Section Begin -->
+  <!-- Affichage de la navbar  -->
   <header class="header-section">
       <div class="container">
           <div class="row">
@@ -54,8 +54,9 @@
       </div>
   </header>
 </body>
+<!-- Fin de la navbar -->
 
-<!-- Footer Section Begin -->
+<!-- Affichage du pied de page  -->
 <section class="footer-section">
     <div class="container">
         <div class="row">
@@ -114,8 +115,10 @@
                 </div>
             </div>
         </div>
-        <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+				<!-- Fin du pied de page  -->
+
+        <div class="copyright-text"><p><!-- Copyright-->
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
+</p></div>
     </div>
 </section>

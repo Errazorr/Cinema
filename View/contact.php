@@ -2,7 +2,7 @@
 <html lang="zxx">
 <?php
 session_start();
-
+//test de connexion a la bdd //
 try{
   $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 }
@@ -10,7 +10,7 @@ catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 $req = $bdd->prepare('SELECT role FROM compte WHERE mail=?');
-//$req->execute(array($_SESSION['mail']));//
+// Sélection du role //
 $role= $req->fetch();
  ?>
 <head>
@@ -21,10 +21,9 @@ $role= $req->fetch();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nous contacter</title>
 
-    <!-- Google Font -->
 
 
-    <!-- Css Styles -->
+    <!-- Liens contenant le styles de la page -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
@@ -33,8 +32,9 @@ $role= $req->fetch();
     <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-   <!-- fin-->
+
    <style type="text/css">
+
           #map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
               height:400px;
           }
@@ -46,7 +46,7 @@ $role= $req->fetch();
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+    <!-- Affichage de la navbar  -->
     <header class="header-section">
         <div class="container">
             <div class="row">
@@ -60,7 +60,7 @@ $role= $req->fetch();
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
                       <ul>
-
+                        <!-- Changement dz la navbar en focntion du role  -->
                         <?php
                         if (isset($_SESSION['mail'])){
                           if ($role == "client") { ?>
@@ -110,11 +110,11 @@ $role= $req->fetch();
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- Fin de la navbar -->
     <div id="map">
       <!-- Ici s'affichera la carte -->
       </div>
-    <!-- Map Section Begin -->
+    <!-- Liens contenat le script de la carte  -->
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
     <script type="text/javascript">
               // On initialise la latitude et la longitude de Paris (centre de la carte)
@@ -141,10 +141,9 @@ $role= $req->fetch();
               };
           </script>
   </div>
-  <!-- Map Section End -->
-    <!-- Map Section End -->
+  <!-- Fin de la carte  -->
 
-    <!-- Contact Section Begin -->
+    <!-- Affichage du formulaire de contact -->
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
@@ -214,9 +213,9 @@ $role= $req->fetch();
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- Fin du formumlaire -->
 
-    <!-- Footer Section Begin -->
+    <!-- Début du pied de page -->
     <section class="footer-section">
         <div class="container">
             <div class="row">
@@ -275,14 +274,15 @@ $role= $req->fetch();
                     </div>
                 </div>
             </div>
-            <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+            <!-- Copyright -->
+            <div class="copyright-text"><p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
+</p></div>
         </div>
     </section>
-    <!-- Footer Section End -->
+    <!-- Fin du pied de page -->
 
-    <!-- Js Plugins -->
+    <!-- Lien contetant le script -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
