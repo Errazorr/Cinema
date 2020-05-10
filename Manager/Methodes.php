@@ -289,4 +289,18 @@ class methode{
     $req->execute(array($suppr_reservation->getReservation()));
     header('Location: ../View/voir_reservation.php');
   }
+
+
+  public function modif_client(user $modification_client){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    $req = $bdd->prepare('UPDATE compte SET nom=?, prenom=?, mail=?, tel=? WHERE id=?');
+    $req->execute(array($modification_client->getNom(), $modification_client->getPrenom(), $modification_client->getMail(), $modification_client->getTel(), $_SESSION['id']));
+    header('Location: ../View/gestion_clients.php');
+  }
 }
