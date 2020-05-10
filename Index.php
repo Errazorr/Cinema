@@ -459,10 +459,29 @@ session_start();
                     <div class="footer-widget fw-links">
                         <h5>Informations</h5>
                         <ul>
-                            <li><a href="View/reservation.php">Reservation</a></li>
-                            <li><a href="View/contact.php">Contact</a></li>
-                            <li><a href="View/Connexion.php">Connexion</a></li>
-                            <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+
+                          <?php
+                          if (isset($_SESSION['mail'])){
+                            if ($_SESSION['role'] == "client") { ?>
+                              <li><a href="View/reservation.php">Reservation</a></li>
+                              <li><a href="View/contact.php">Contact</a></li>
+                              <li><a href="../session_destroy.php">Déconnexion</a></li>
+                              <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                            <?php  }
+
+                             else { ?>
+                               <li><a href="View/voir_reservation.php">Reservations</a></li>
+                               <li><a href="View/contact.php">Contact</a></li>
+                               <li><a href="../session_destroy.php">Déconnexion</a></li>
+                               <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                          <?php }
+                        }
+                        else{ ?>
+                          <li><a href="View/contact.php">Contact</a></li>
+                          <li><a href="View/Connexion.php">Connexion</a></li>
+                          <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+
+                          <?php	}  ?>
                         </ul>
                     </div>
                 </div>
