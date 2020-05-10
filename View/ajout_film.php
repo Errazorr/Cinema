@@ -49,7 +49,7 @@
 					</div>
 					<div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form method="POST" action="../Traitement/commentaires.php">
+							<form method="POST" action="../Traitement/ajout_film.php">
 								<div class="form-group">
 									<span class="form-label">Entrez le nom du film</span>
 									<input class="form-control" type="text" name="film" placeholder="Nom du film" required>

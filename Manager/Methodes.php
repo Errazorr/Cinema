@@ -249,4 +249,30 @@ class methode{
     $req->execute(array($reserv, $salle[0], $modif_reservation->getDate()));
     header('Location: ../View/voir_reservation.php');
   }
+
+
+
+  public function ajout_film($ajout){
+    try{
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+    $req = $bdd->prepare('SELECT * FROM salle WHERE film=?');
+    $req->execute(array($ajout->getFilm()));
+    $donnees = $req->fetch();
+
+    if ($donnees) {
+      echo '<body onLoad="alert(\'Film déjà enregistré\')">';
+
+      echo '<meta http-equiv="refresh" content="0;URL=../View/ajout_film.php">';
+    }
+
+    else {
+      $rec = $bdd->prepare('INSERT INTO salle (num, film, description, 3D, nb_places, places_restantes) VALUES (?,?,?,?,?,?)');
+      $a = $rec->execute(array($ajout->getNum_salle(), $ajout->getFilm(), $ajout->getDescription(), $ajout->getDimension(), $ajout->getPlaces(), $ajout->getPlaces()));
+      header('Location: ../View/compte_admin.php');
+    }
+  }
 }
