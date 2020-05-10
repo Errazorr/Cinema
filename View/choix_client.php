@@ -9,26 +9,20 @@
 
 	<title>Modifier une réservation</title>
 
-	<!-- Google font -->
+	<!-- Logo -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-	<!-- Bootstrap -->
+	<!-- Liens contenant le style de la page  -->
 	<link type="text/css" rel="stylesheet" href="../reservation/css/bootstrap.min.css" />
-
-	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="../reservation/css/style.css" />
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+
 
 </head>
 
 <body>
 	<?php
+	//Test de connexion à la bdd//
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -36,6 +30,7 @@
 		die('Erreur:'.$e->getMessage());
 	}
 	?>
+	<!-- Affichage du formulaire permettant de moddifier le client   -->
 	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
@@ -53,9 +48,10 @@
 									<select class="form-control" name="client" placeholder="Choisissez un film">
 
 											<?php
+											//Sélection des nom de la table compte en focnton du role //
 											$req = $bdd->query('SELECT nom FROM compte WHERE role="Client"');
 									    $donnees= $req->fetchall();
-
+											//Affichage des données //
 											foreach ($donnees as $value) {
 												echo '<option>'.$value["nom"].'</option>';
 											}
@@ -64,7 +60,7 @@
 									</select>
 								</div>
 								<div class="form-btn">
-									<button class="submit-btn">Modifier la personne</button>
+									<button class="submit-btn">Modifier la personne</button><!-- Button permettant l'envoie des données   -->
 								</div>
 							</form>
 						</div>
@@ -73,6 +69,6 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body><!-- Fin du formulaire -->
 
 </html>

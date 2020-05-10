@@ -9,25 +9,18 @@
 
 	<title>Modifier une réservation</title>
 
-	<!-- Google font -->
+	<!-- logo -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-	<!-- Bootstrap -->
+  <!-- Liens contenant le style de la page  -->
 	<link type="text/css" rel="stylesheet" href="../reservation/css/bootstrap.min.css" />
-
-	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="../reservation/css/style.css" />
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
 </head>
 
 <body>
+	  <!-- Test de connexion à la bdd -->
 	<?php
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
@@ -36,6 +29,7 @@
 		die('Erreur:'.$e->getMessage());
 	}
 	?>
+	  <!-- Affichage d'un formulaire permettant de supprimer un client  -->
 	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
@@ -53,10 +47,12 @@
 									<select class="form-control" name="nom" placeholder="Choisissez un film">
 
 											<?php
+											// Sélectionne les nom de la table compte en fonction du role //
 											$req = $bdd->query('SELECT nom FROM compte WHERE role="Client"');
 									    $donnees= $req->fetchall();
 
 											foreach ($donnees as $value) {
+												//affiche les valeurs //
 												echo '<option>'.$value["nom"].'</option>';
 											}
 											?>
@@ -89,6 +85,7 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
+<!-- Fin du formulaire  -->
 
 </html>
