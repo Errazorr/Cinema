@@ -11,13 +11,13 @@ session_start();
     <meta name="keywords" content="Hazze, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Palais du cinéma</title>
+    <title>Palais du cinéma</title>  <!-- titre -->
 
-    <!-- Google Font -->
+    <!-- logo -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
-    <!-- Css Styles -->
+    <!-- Liens contenant le style de la page -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
@@ -28,12 +28,12 @@ session_start();
 </head>
 
 <body>
-    <!-- Page Preloder -->
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+    <!-- affichage de la navbar -->
     <header class="header-section">
         <div class="container">
             <div class="row">
@@ -97,9 +97,7 @@ session_start();
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
-
-    <!-- Hero Section Begin -->
+<!-- Affichage de notre plus grande salle  -->
     <section class="hero-section set-bg" data-setbg="img/cinema.png">
         <div class="container">
             <div class="row">
@@ -114,9 +112,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Hero Section End -->
+    <!-- Fin de la navbar  -->
 
-    <!-- About Us Section Begin -->
+    <!-- Présenation de l'entreprise -->
     <section class="about-us-section spad">
         <div class="container">
             <div class="row">
@@ -139,9 +137,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- About Us Section End -->
+    <!-- fin de la présentation de l'entreprise -->
 
-    <!-- Services Section Begin -->
+    <!-- Présenation de nos service -->
     <section class="services-section spad">
         <div class="container">
             <div class="row">
@@ -177,9 +175,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Services Section End -->
+    <!-- Fin de la présentation de nos services -->
 
-    <!-- Portfolio Section Begin -->
+    <!-- Présenation des films du mois-->
     <section class="portfolio-section spad">
         <div class="container">
             <div class="row">
@@ -232,9 +230,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Portfolio Section End -->
+    <!-- Fin de la présenation des films du mois -->
 
-    <!-- Counter Section Begin -->
+    <!-- Présenation de notre cinéma -->
     <section class="counter-section spad">
         <div class="container">
             <div class="row">
@@ -270,9 +268,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Counter Section End -->
+    <!-- Fuin de la présentation de notre cinéma -->
 
-    <!-- Testimonial Section Begin -->
+    <!-- Présenation des commentaires -->
     <section class="testimonial-section spad">
         <div class="container">
             <div class="row testimonial-slider owl-carousel">
@@ -307,9 +305,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Testimonial Section End -->
+    <!-- Fin des commentaires -->
 
-    <!-- Member Section Begin -->
+    <!-- Présentation des trois films les plus vu la semaine derniére -->
     <section class="member-section spad">
         <div class="container">
             <div class="row">
@@ -357,9 +355,9 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- Member Section End -->
+    <!-- Fin Présentation -->
 
-    <!-- Blog Section Begin -->
+    <!-- Affichage de deux films tres attendus -->
     <div class="blog-section latest-blog spad">
         <div class="container">
             <div class="row">
@@ -429,9 +427,9 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- Blog Section End -->
+    <!-- Fin de l'affichage -->
 
-    <!-- Footer Section Begin -->
+    <!-- Affichage du pied de page  -->
     <section class="footer-section">
         <div class="container">
             <div class="row">
@@ -509,14 +507,14 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div class="copyright-text"><p><!-- Copyright -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
         </div>
     </section>
-    <!-- Footer Section End -->
+    <!-- Fin du pied de page  -->
 
-    <!-- Js Plugins -->
+    <!-- Liens conteant le script de la page  -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
