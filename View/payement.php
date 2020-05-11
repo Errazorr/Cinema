@@ -49,22 +49,11 @@ $role= $req->fetch();
                       <ul>
                         <!-- Changement dz la navbar en focntion du role  -->
                         <?php
+                        //Si il y a une session ouverte
                         if (isset($_SESSION['mail'])){
-                          if ($role == "client") { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
-                            <li><a href="Nouveaute.php">Film & évènement</a>
-                                <ul class="dropdown">
-                                    <li><a href="Nouveaute.php">Nouveauté</a></li>
-                                    <li><a href="Prochainement.php">Prochainement</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="compte_client.php">Mon compte</a></li>
-                            <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
-                          <?php  }
-
-                           else { ?>
-                            <li class="active"><a href="../index.php">Accueil</a></li>
+                          //Si la personne est un client
+                          if ($_SESSION['role'] == "client") { ?>
+                            <li class="active"><a href="index.php">Accueil</a></li>
                             <li><a href="reservation.php">Réservation</a></li>
                             <li><a href="Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
@@ -73,12 +62,26 @@ $role= $req->fetch();
                                 </ul>
                             </li>
                             <li><a href="contact.php">Contact</a></li>
+                            <li><a href="compte_client.php">Mon compte</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
+                          <?php  }
+                            //Sinon c'est donc un admin
+                           else { ?>
+                            <li class="active"><a href="index.php">Accueil</a></li>
+                            <li><a href="Nouveaute.php">Film & évènement</a>
+                                <ul class="dropdown">
+                                    <li><a href="Nouveaute.php">Nouveauté</a></li>
+                                    <li><a href="Prochainement.php">Prochainement</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.php">Contact</a></li>
                             <li><a href="compte_admin.php">Mon compte</a></li>
-                            <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
+                            <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }
                       }
+                      //Sinon il n'y a pas de sessions ouverte
                       else{ ?>
-                          <li class="active"><a href="../index.php">Accueil</a></li>
+                          <li class="active"><a href="index.php">Accueil</a></li>
                           <li><a href="Nouveaute.php">Film & évènement</a>
                               <ul class="dropdown">
                                   <li><a href="Nouveaute.php">Nouveauté</a></li>
@@ -169,23 +172,23 @@ $role= $req->fetch();
                       <?php
                       if (isset($_SESSION['mail'])){
                         if ($_SESSION['role'] == "client") { ?>
-                          <li><a href="View/reservation.php">Reservation</a></li>
-                          <li><a href="View/contact.php">Contact</a></li>
+                          <li><a href="reservation.php">Reservation</a></li>
+                          <li><a href="contact.php">Contact</a></li>
                           <li><a href="../session_destroy.php">Déconnexion</a></li>
-                          <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                          <li><a href="Nouveaute.php">Nouveauté</a></li>
                         <?php  }
 
                          else { ?>
-                           <li><a href="View/voir_reservation.php">Reservations</a></li>
-                           <li><a href="View/contact.php">Contact</a></li>
+                           <li><a href="voir_reservation.php">Reservations</a></li>
+                           <li><a href="contact.php">Contact</a></li>
                            <li><a href="../session_destroy.php">Déconnexion</a></li>
-                           <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                           <li><a href="Nouveaute.php">Nouveauté</a></li>
                       <?php }
                     }
                     else{ ?>
-                      <li><a href="View/contact.php">Contact</a></li>
-                      <li><a href="View/Connexion.php">Connexion</a></li>
-                      <li><a href="View/Nouveaute.php">Nouveauté</a></li>
+                      <li><a href="contact.php">Contact</a></li>
+                      <li><a href="Connexion.php">Connexion</a></li>
+                      <li><a href="Nouveaute.php">Nouveauté</a></li>
 
                       <?php	}  ?>
                     </ul>
