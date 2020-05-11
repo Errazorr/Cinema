@@ -87,7 +87,7 @@ $mail->addAddress($inscription->getmail(), 'Inscription');     // Add a recipien
  $mail->Body    =   'Bonjour et bienvenue au palais du cinéma, merci de nous faire confiance';
 if(!$mail->Send()) {
   // Si l'envoie de mail ne s'excuté pas alors on affiche une erreur //
-  echo '<body onLoad="alert(\'Erreur\')">';
+  echo '<body onLoad="alert(\'Erreur, mail non envoyé\')">';
 echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
 } else {
   // Si l'envoie de mail est excuté alors on redirige vers la page d'accueil //
