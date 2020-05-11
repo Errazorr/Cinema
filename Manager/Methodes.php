@@ -28,6 +28,7 @@ class methode{
     // Si la rêquette s'execute alors on redirige vers la page d'accueil //
     if ($donnees['mail'] == $connexion->getMail() AND $donnees['mdp'] == md5($connexion->getMdp())) {
       $_SESSION['nom'] = $donnees['nom'];
+      $_SESSION['prenom'] = $donnees['prenom'];
       $_SESSION['tel'] = $donnees['tel'];
       $_SESSION['mail'] = $connexion->getMail();
       $_SESSION['role'] = $donnees['role'];
@@ -263,8 +264,8 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     die('Erreur:'.$e->getMessage());
   }
 
-  $rec = $bdd->prepare('UPDATE compte SET mail=?, tel=?, mdp=? WHERE nom=? AND prenom=?');
-  $a = $rec->execute(array($modification->getMail(), $modification->getTel(), $modification->getMdp(), $_SESSION['nom'], $_SESSION['prenom']));
+  $rec = $bdd->prepare('UPDATE compte SET nom=?, prenom=?, mail=?, tel=?, mdp=? WHERE id=?');
+  $a = $rec->execute(array($modification->getNom(), $modification->getPrenom(), $modification->getMail(), $modification->getTel(), $modification->getMdp(), $_SESSION['id_modif']));
   header('Location: ../View/compte_client.php');
 }
 

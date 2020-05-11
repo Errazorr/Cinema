@@ -12,9 +12,14 @@ catch (Exception $e){
 }
 
 //Sélection du nom ainsi que du prénom //
-$req = $bdd->prepare('SELECT * FROM compte WHERE nom=? AND prenom=?');
+$req = $bdd->prepare('SELECT id FROM compte WHERE nom=? AND prenom=?');
 $req->execute(array($_SESSION['nom'], $_SESSION['prenom']));
-$donnees= $req->fetch();
+$id= $req->fetch();
+$_SESSION['id_modif'] = $id[0];
+
+$rec = $bdd->prepare('SELECT * FROM compte WHERE id=?');
+$rec->execute(array($id[0]));
+$donnees= $rec->fetch();
  ?>
 
 <head>
@@ -42,6 +47,14 @@ $donnees= $req->fetch();
                     <div class="signup-form">
                         <h2 class="form-title">Modification des données</h2>
                         <form method="POST" action="../Traitement/modification_client.php" class="register-form" id="register-form">
+                          <div class="form-group">
+                              <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                              <input type="text" name="nom" id="name" placeholder="Votre nom" <?php echo 'value='.'"'.$donnees["nom"].'"'.''?>/>
+                          </div>
+                          <div class="form-group">
+                              <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                              <input type="text" name="prenom" id="surname" placeholder="Votre prénom" <?php echo 'value='.'"'.$donnees["prenom"].'"'.''?>/>
+                          </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Votre email" <?php echo 'value='.'"'.$donnees["mail"].'"'.''?>/>

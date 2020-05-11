@@ -39,7 +39,9 @@ if ($_POST['ancien_mdp'] != "" AND $_POST['mdp'] != "" AND $_POST['confirm'] != 
 
     else{//Sinon
       //Instanciation de modification de type user
-      $modification = new user(['mail' =>$_POST['email'],
+      $modification = new user(['nom' =>$_POST['nom'],
+                                'prenom' =>$_POST['prenom'],
+                                'mail' =>$_POST['email'],
                                 'tel' =>$_POST['telephone'],
                                 'mdp' =>md5($_POST['mdp'])]);
       $modif = new methode; //Instanciation de modif de type méthode
@@ -50,7 +52,9 @@ if ($_POST['ancien_mdp'] != "" AND $_POST['mdp'] != "" AND $_POST['confirm'] != 
 
 else {//Sinon
   //Instanciation de modification de type user
-  $modification = new user(['mail' =>$_POST['email'],
+  $modification = new user(['nom' =>$_POST['nom'],
+                            'prenom' =>$_POST['prenom'],
+                            'mail' =>$_POST['email'],
                             'tel' =>$_POST['telephone'],
                             'mdp' =>$donnees['mdp']]);
   $modif = new methode; //Instanciation de modif de type méthode
