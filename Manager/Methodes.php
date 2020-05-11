@@ -281,6 +281,10 @@ public function modif_reservation(reservation $modif_reservation){
   $req->execute(array($modif_reservation->getFilm()));
   $salle= $req->fetch();
 
+  $rec = $bdd->prepare('SELECT nom FROM reservation WHERE reservation=?');
+  $rec->execute(array($modif_reservation->getReservation()));
+  $nom = $rec->fetch();
+
   $req = $bdd->prepare('UPDATE reservation SET num_salle=?, date_prevue=? WHERE reservation=?');
   $req->execute(array($salle[0], $modif_reservation->getDate(), $modif_reservation->getReservation()));
 
