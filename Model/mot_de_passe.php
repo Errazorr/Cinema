@@ -1,5 +1,5 @@
 <?php
-class mot_de_passe { // classe contact reprenant les information du manager, formulaire, model//
+class mot_de_passe { // classe contact reprenant les informations du manager, formulaire, model//
   private $_mail;
 
   public function __construct($mail){

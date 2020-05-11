@@ -1,6 +1,8 @@
 <?php
 
 class user {
+// classe user reprenant les informations du manager, formulaire, model//
+
   protected $_nom;
   private $_prenom;
   private $_id;
@@ -21,7 +23,7 @@ class user {
     }
   }
 
-  //setter
+  //Déclaration de l'ensemble des setter //
 
   public function setNom ($nom){
     $this->_nom = $nom;
@@ -47,7 +49,7 @@ class user {
     $this->_mdp = $mdp;
   }
 
-  //getter
+  //Déclaration de l'ensemble des getters //
 
   public function getNom(){return $this->_nom;}
   public function getPrenom(){return $this->_prenom;}

@@ -1,4 +1,5 @@
 <div id="paypal-button-container"></div>
+<!-- Formulaire de paiement -->
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
@@ -25,3 +26,4 @@
       }
   }).render('#paypal-button-container');
 </script>
+<!-- Fin du formulaire -->

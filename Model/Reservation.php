@@ -2,7 +2,9 @@
 
 require_once 'User.php';
 
+// classe reservation reprenant les informations du manager, formulaire, model//
 class reservation extends user{
+
   private $_date;
   private $_pers;
   private $_film;
@@ -29,6 +31,7 @@ class reservation extends user{
     }
   }
 
+ //Déclaration de l'ensemble des setteur //
   public function setDate ($date){
     $this->_date = $date;
   }
@@ -65,6 +68,9 @@ class reservation extends user{
     $this->_reservation = $reservation;
   }
 
+<<<<<<< HEAD
+// Déclaration de l'ensemble des getteur //
+=======
   public function setDescription ($description){
     $this->_description = $description;
   }
@@ -77,6 +83,7 @@ class reservation extends user{
     $this->_dimension = $dimension;
   }
 
+>>>>>>> b0bc8918d35298a01686c916cb9614aca89b31ad
   public function getDate(){return $this->_date;}
   public function getPers(){return $this->_pers;}
   public function getFilm(){return $this->_film;}

@@ -1,5 +1,5 @@
 <?php
-class contact { // classe contact reprenant les information du manager, formulaire, model//
+class contact { // classe contact reprenant les informations du manager, formulaire, model//
   private $_nom;
   private $_mail;
   private $_message;

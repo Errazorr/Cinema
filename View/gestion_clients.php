@@ -7,26 +7,21 @@
   <meta name="keywords" content="Hazze, unica, creative, html">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Les réservations</title>
-<!--===============================================================================================-->
+	<!-- Logo  -->
 	<link rel="icon" type="image/png" href="../tableau/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
+
+	<!-- Liens contenant le style du tableau  -->
 	<link rel="stylesheet" type="text/css" href="../tableau/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../tableau/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../tableau/vendor/animate/animate.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../tableau/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../tableau/vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../tableau/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../tableau/css/main.css">
   <link rel="stylesheet" type="text/css" href="../tableau/css/style.css">
 	<link rel="stylesheet" type="text/css" href="../tableau/css/style2.css">
-<!--===============================================================================================-->
 
-<!-- Css Styles -->
+<!-- Liens contenant le style de la page  -->
 <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
 <link rel="stylesheet" href="../css/themify-icons.css" type="text/css">
@@ -37,6 +32,7 @@
 </head>
 <body>
 
+<!-- Test de connexion à la bdd -->
 	<?php
 	//Connexion à la bdd
 	try{
@@ -47,7 +43,7 @@
 	}
 	?>
 
-  <!-- Header Section Begin -->
+  <!-- Affichage de la navbar -->
   <header class="header-section">
       <div class="container">
           <div class="row">
@@ -81,8 +77,9 @@
           <div id="mobile-menu-wrap"></div>
       </div>
   </header>
+	<!-- Fin de la navbar -->
 
-
+<!-- Affichage du tableau  -->
 		<div class="container-table100">
 			<div class="wrap-table100">
 
@@ -110,6 +107,7 @@
 
 								//Tableau avec toutes les données trouvées précédemment
 								foreach ($donnees as $value) {
+									// Affichage des informations //
 									echo '<tr class="row100 body">
 												<td class="cell100 column1">'.$value["nom"].'</td>
 												<td class="cell100 column2">'.$value["prenom"].'</td>
@@ -133,8 +131,9 @@
 			</div>
 			</div>
 		</div>
+		<!-- Fin du tableau -->
 
-    <!-- Footer Section Begin -->
+    <!-- Affichage du pied de page -->
     <section class="footer-section">
         <div class="container">
             <div class="row">
@@ -193,23 +192,21 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+						<!-- Fin du pied de page -->
+            <div class="copyright-text"><p><!-- Copyright -->
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé avec <i class="ti-heart" aria-hidden="true"></i> par Yanish et Nathan</a>
+</p></div>
         </div>
     </section>
 
-
-<!--===============================================================================================-->
+<!-- Liens contenant le script du tableau -->
 	<script src="../tableau/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
 	<script src="../tableau/vendor/bootstrap/js/popper.js"></script>
 	<script src="../Tableau/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
 	<script src="../tableau/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
 	<script src="../tableau/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
+<!-- Liens contenant le script de la page  -->
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/jquery.magnific-popup.min.js"></script>
@@ -228,8 +225,8 @@
 
 
 	</script>
-<!--===============================================================================================-->
 	<script src="../tableau/js/main.js"></script>
+	<!-- Fin du script  -->
 
 </body>
 </html>

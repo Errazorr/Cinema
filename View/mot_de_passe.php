@@ -11,6 +11,7 @@
 
     <!-- Lien contenant le style de la page -->
     <link rel="stylesheet" href="../inscription/css/style.css">
+    <link rel="stylesheet" href="../Inscription/css/style2.css">
 </head>
 <body>
 

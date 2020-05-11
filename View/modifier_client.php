@@ -11,12 +11,12 @@ catch (Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 
-//Sélection du nom ainsi que du prénom //
+//Sélection des id de la table compte en fonction du nom //
 $req = $bdd->prepare('SELECT id FROM compte WHERE nom=?');
 $req->execute(array($_POST['client']));
 $id= $req->fetch();
 $_SESSION['id'] = $id;
-
+//Sélection de l'ensemble des informations de la table compte en fonction de l'id //
 $rec = $bdd->prepare('SELECT * FROM compte WHERE id=?');
 $rec->execute(array($id[0]));
 $donnees= $rec->fetch();

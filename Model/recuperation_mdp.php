@@ -1,5 +1,5 @@
 <?php
-class  mot_de_passe_oublie{ // classe contact reprenant les information du manager, formulaire, model//
+class  mot_de_passe_oublie{ // classe contact reprenant les informations du manager, formulaire, model//
   private $_mdp;
   private $_mail;
 

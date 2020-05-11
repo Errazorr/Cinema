@@ -1,5 +1,5 @@
 <?php
-
+//Envoie des données vers les pages suivantes //
 require '../Model/user.php';
 require '../Manager/Methodes.php';
 
@@ -10,12 +10,13 @@ if ($_POST['mdp'] != $_POST['confirm']) {
 }
 
 else{
+  //Enregistrement des données //
   $inscription = new user(['nom' =>$_POST['nom'],
                                   'prenom' =>$_POST['prenom'],
                                   'mail' =>$_POST['email'],
                                   'tel' =>$_POST['telephone'],
                                   'mdp' =>$_POST['mdp']]);
-  $inscrit = new methode;
+  $inscrit = new methode; //Déclration d'une nouvelle methode //
   $inscrit->inscription($inscription);
 }
 

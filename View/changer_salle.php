@@ -28,6 +28,7 @@
 </head>
 
 <body>
+	<!-- Test de connexion à la bdd -->
 	<?php
 	//Connexion à la bdd
 	try{
@@ -37,6 +38,7 @@
 		die('Erreur:'.$e->getMessage());
 	}
 	?>
+	<!-- Affichage du formulaire permettantde changer la salle pour un film -->
 	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
@@ -56,11 +58,12 @@
 									<select class="form-control" name="film" placeholder="Choisissez un film">
 
 											<?php
-											//Liste déroulante avec le nom de chaque film dans la bdd
+											// Sélection des films //
 											$req = $bdd->query('SELECT film FROM salle');
 									    $donnees= $req->fetchall();
 
 											foreach ($donnees as $value) {
+												//Affichage des données //
 												echo '<option>'.$value["film"].'</option>';
 											}
 											?>
@@ -88,6 +91,6 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body><!-- Fin du formulaire -->
 
 </html>

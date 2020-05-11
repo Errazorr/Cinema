@@ -1,9 +1,9 @@
 <?php
 $mail= $_POST['mail'];
-
+//Utilisation de service //
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-//Recuperation de données des page suivantes //
+//Récuperation de données des page suivantes //
 require '../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
@@ -21,7 +21,7 @@ public function mot_de_passe($donnee){
     $req->execute(array('mail'=>$donnee->getmail()));
 
   }
-
+// Envoie des données à l'adresse mail //
   public function Mail($donnee){
   $mail = new PHPMailer();
   $mail->isSMTP();                                            // Send using SMTP
@@ -37,10 +37,11 @@ public function mot_de_passe($donnee){
   $mail->addAddress($donnee->getmail(), 'Mot de passe');     // Add a recipient //Recipients
    $mail->Body    = "<a href='http://localhost/GitHub/Cinema/view/recuperation_mdp.php'>Réinitialiser mot de passe</a>";
 ;
+// Si l'envoie de mail s'effectue alors on redirige vers une page //
   if(!$mail->Send()) {
     echo '<body onLoad="alert(\'Erreur\')">';
   echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
-  } else {
+} else { // Si l'envoie de mail ne s'effectue pas alors on redirige vers une autre page //
      header("location: ../index.php");
   }
 
