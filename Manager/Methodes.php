@@ -118,11 +118,12 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     }
 
     else {
+      //Insertion dans la table compte
       $req = $bdd->prepare('INSERT INTO compte (nom, prenom, mail, tel, mdp, role) VALUES (?,?,?,?,?,?)');
       $req->execute(array($admin->getNom(), $admin->getPrenom(), $admin->getMail(), $admin->getTel(), md5($admin->getMdp()), 'admin'));
       $_SESSION['nom'] = $admin->getNom();
       $_SESSION['prenom'] = $admin->getPrenom();
-      header('Location: ../Index.php');
+      header('Location: ../Index.php'); //Redirection
     }
 
   }
@@ -158,6 +159,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
       // Si le nombre de personne est égal à 0 alors on affiche une erreur //
       if ($nb_pers == 0) {
+        //Message d'erreur si le nombre de personne est 0
         echo '<body onLoad="alert(\'Entrez le nombre de personnes à aller voir ce film\')">';
 
         echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
@@ -168,11 +170,13 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
         $requ->execute(array($reservation->getFilm()));
         $places_rest= $requ->fetch(); //Nb de places restantes en fonction du film choisi pendant la réservation
 
-        if ($places_rest >= $nb_pers) {
+        if ($places_rest >= $nb_pers) { //Si le nombre de places restantes est supérieur au nombre de personnes de la reservation
+          //Insertion dans la table reservation
           $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
           $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
           $_SESSION['prix'] = $prix;
 
+          //Mise à jour du nombre de places restantes dans la table en fonction du nombre de personnes dans la reservation
           $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
           $rec = $bdd->prepare('UPDATE salle SET places_restantes=? WHERE film=?');
           $a = $rec->execute(array($places_rest, $reservation->getFilm()));
@@ -180,6 +184,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
         }
 
         else {
+          //Sinon un message d'erreur apparait
           echo '<body onLoad="alert(\'Pas assez de place pour autant de personnes\')">';
 
           echo '<meta http-equiv="refresh" content="0;URL=../View/reservation.php">';
