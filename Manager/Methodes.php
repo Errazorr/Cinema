@@ -166,7 +166,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
           $reserv = $_SESSION['nom']."/".$reservation->getFilm()."/".$reservation->getDate();
 
           $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue, reservation) VALUES (?,?,?,?,?,?,?)');
-          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate(), $reserv));
+          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle[0], $prix, $nb_pers, $reservation->getDate(), $reserv));
           $_SESSION['prix'] = $prix;
           //Mise à jour du nombre de places restantes dans la table en fonction du nombre de personnes dans la reservation
           $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
