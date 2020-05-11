@@ -61,6 +61,7 @@ $role= $req->fetch();
                         if (isset($_SESSION['mail'])){
                           if ($_SESSION['role'] == "client") { ?>
                             <li class="active"><a href="../index.php">Accueil</a></li>
+                            <li><a href="View/reservation.php">Réservation</a></li>
                             <li><a href="Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="Nouveaute.php">Nouveauté</a></li>
@@ -74,14 +75,12 @@ $role= $req->fetch();
 
                            else { ?>
                             <li class="active"><a href="../index.php">Accueil</a></li>
-                            <li><a href="reservation.php">Réservation</a></li>
                             <li><a href="Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
                                     <li><a href="Nouveaute.php">Nouveauté</a></li>
                                     <li><a href="Prochainement.php">Prochainement</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.php">Contact</a></li>
                             <li><a href="compte_admin.php">Mon compte</a></li>
                             <li><a href="../Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }

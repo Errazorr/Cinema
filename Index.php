@@ -74,7 +74,6 @@ session_start();
                                     <li><a href="View/Prochainement.php">Prochainement</a></li>
                                 </ul>
                             </li>
-                            <li><a href="View/contact.php">Contact</a></li>
                             <li><a href="View/compte_admin.php">Mon compte</a></li>
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }
