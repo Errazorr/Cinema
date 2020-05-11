@@ -142,18 +142,9 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     $req->execute(array($_SESSION['nom']));
     $donnees= $req->fetch();
     //Permet de déterminer les salles pour les films //
-      if ($reservation->getFilm() == 'L\'appel de la forêt') {
-        $salle = 1;
-      }
-      if ($reservation->getFilm() == 'Sonic le film') {
-        $salle = 2;
-      }
-      if ($reservation->getFilm() == 'De Gaulle') {
-        $salle = 3;
-      }
-      if ($reservation->getFilm() == 'En Avant Disney') {
-        $salle = 4;
-      }
+    $rec = $bdd->prepare('SELECT num FROM salle WHERE film=?');
+    $rec->execute(array($reservation->getFilm()));
+    $salle= $rec->fetch();
       //Permet de déterminer le prix //
       $prix = $reservation->getAdulte() * 12 + $reservation->getAdo() * 10 + $reservation->getEnfant() * 8;
       $nb_pers = $reservation->getAdulte() + $reservation->getAdo() + $reservation->getEnfant();
@@ -172,15 +163,16 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
 
         if ($places_rest >= $nb_pers) { //Si le nombre de places restantes est supérieur au nombre de personnes de la reservation
           //Insertion dans la table reservation
-          $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue) VALUES (?,?,?,?,?,?)');
-          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate()));
-          $_SESSION['prix'] = $prix;
+          $reserv = $_SESSION['nom']."/".$reservation->getFilm()."/".$reservation->getDate();
 
+          $req = $bdd->prepare('INSERT INTO reservation (nom, tel, num_salle, prix, nb_pers, date_prevue, reservation) VALUES (?,?,?,?,?,?,?)');
+          $a = $req->execute(array($_SESSION['nom'], $_SESSION['tel'], $salle, $prix, $nb_pers, $reservation->getDate(), $reserv));
+          $_SESSION['prix'] = $prix;
           //Mise à jour du nombre de places restantes dans la table en fonction du nombre de personnes dans la reservation
           $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
           $rec = $bdd->prepare('UPDATE salle SET places_restantes=? WHERE film=?');
           $a = $rec->execute(array($places_rest, $reservation->getFilm()));
-          header('Location: ../View/payement.php');
+          //header('Location: ../View/payement.php');
         }
 
         else {
