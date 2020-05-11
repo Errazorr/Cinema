@@ -232,3 +232,4 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     header('Location: ../View/compte_client.php');
 
   }
+}
