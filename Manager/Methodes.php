@@ -232,12 +232,13 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
   }
 
   public function ajout_film($ajout){
+    //Connexion à la bdd
     try{
       $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
     }
     catch (Exception $e){
       die('Erreur:'.$e->getMessage());
-    }
+    }//Execution de la requête //
     $req = $bdd->prepare('SELECT * FROM salle WHERE film=?');
     $req->execute(array($ajout->getFilm()));
     $donnees = $req->fetch();
@@ -248,36 +249,38 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
       echo '<meta http-equiv="refresh" content="0;URL=../View/ajout_film.php">';
     }
 
-    else {
+    else {//Execution de la requête //
       $rec = $bdd->prepare('INSERT INTO salle (num, film, description, 3D, nb_places, places_restantes) VALUES (?,?,?,?,?,?)');
       $a = $rec->execute(array($ajout->getNum_salle(), $ajout->getFilm(), $ajout->getDescription(), $ajout->getDimension(), $ajout->getPlaces(), $ajout->getPlaces()));
-      header('Location: ../View/compte_admin.php');
+      header('Location: ../View/compte_admin.php');// Redirection en fonction de l'execution de la requête //
     }
   }
 
 
   public function modification($modification){
+    //Connexion à la bdd
   try{
     $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());
   }
-
+//Execution de la requête //
   $rec = $bdd->prepare('UPDATE compte SET nom=?, prenom=?, mail=?, tel=?, mdp=? WHERE id=?');
   $a = $rec->execute(array($modification->getNom(), $modification->getPrenom(), $modification->getMail(), $modification->getTel(), $modification->getMdp(), $_SESSION['id_modif']));
-  header('Location: ../View/compte_client.php');
+  header('Location: ../View/compte_client.php');// Redirection en fonction de l'execution de la requête //
 }
 
 
 public function modif_reservation(reservation $modif_reservation){
+  //Connexion à la bdd
   try{
     $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());
   }
-
+//Execution des requêtes //
   $req = $bdd->prepare('SELECT num FROM salle WHERE film=?');
   $req->execute(array($modif_reservation->getFilm()));
   $salle= $req->fetch();
@@ -293,49 +296,52 @@ public function modif_reservation(reservation $modif_reservation){
 
   $req = $bdd->prepare('UPDATE reservation SET reservation=? WHERE num_salle=? AND date_prevue=?');
   $req->execute(array($reserv, $salle[0], $modif_reservation->getDate()));
-  header('Location: ../View/voir_reservation.php');
+  header('Location: ../View/voir_reservation.php');// Redirection en fonction de l'execution de la requête //
 }
 
 
 
 public function suppr_reservation(reservation $suppr_reservation){
+  //Connexion à la bdd
   try{
     $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());
   }
-
+//Execution de la requête //
   $req = $bdd->prepare('DELETE FROM reservation WHERE reservation=?');
   $req->execute(array($suppr_reservation->getReservation()));
-  header('Location: ../View/voir_reservation.php');
+  header('Location: ../View/voir_reservation.php');// Redirection en fonction de l'execution de la requête //
 }
 
 
 public function modif_client(user $modification_client){
+  //Connexion à la bdd
   try{
     $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());
   }
-
+//Execution de la requête //
   $req = $bdd->prepare('UPDATE compte SET nom=?, prenom=?, mail=?, tel=? WHERE id=?');
   $req->execute(array($modification_client->getNom(), $modification_client->getPrenom(), $modification_client->getMail(), $modification_client->getTel(), $_SESSION['id']));
-  header('Location: ../View/gestion_clients.php');
+  header('Location: ../View/gestion_clients.php');// Redirection en fonction de l'execution de la requête //
 }
 
 
 public function suppr_client(user $suppr_client){
+  //Connexion à la bdd
   try{
     $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());
   }
-
+//Execution de la requête //
   $req = $bdd->prepare('DELETE FROM compte WHERE nom=? AND prenom=?');
   $req->execute(array($suppr_client->getNom(), $suppr_client->getPrenom()));
-  header('Location: ../View/gestion_clients.php');
+  header('Location: ../View/gestion_clients.php');// Redirection en fonction de l'execution de la requête //
 }
 }
