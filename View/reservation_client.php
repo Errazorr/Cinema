@@ -104,6 +104,7 @@
                 $req->execute(array($_SESSION['nom']));
 								$donnees= $req->fetchall();
 
+								//Tableau avec chaque réservation faite par le client connecté
 								foreach ($donnees as $value) {
 									echo '<tr class="row100 body">
 												<td class="cell100 column1">'.$value["film"].'</td>
@@ -114,9 +115,6 @@
 												</tr>';
 								}
 								?>
-
-
-
 
 							</tbody>
 						</table>

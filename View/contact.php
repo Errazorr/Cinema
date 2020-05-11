@@ -60,7 +60,7 @@ $role= $req->fetch();
                 <div class="col-lg-10 col-md-10">
                     <div class="main-menu mobile-menu">
                       <ul>
-                        <!-- Changement dz la navbar en focntion du role  -->
+                        <!-- Changement de la navbar en fonction du role  -->
                         <?php
                         if (isset($_SESSION['mail'])){
                           if ($role == "client") { ?>

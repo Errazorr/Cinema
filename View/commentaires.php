@@ -21,6 +21,7 @@
 
 	<!-- Test de connexion à la bdd -->
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}

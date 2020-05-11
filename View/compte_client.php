@@ -3,13 +3,6 @@
 <!-- Test de connexion -->
 <?php
 session_start();
-
-try{
-  $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
-}
-catch (Exception $e){
-  die('Erreur:'.$e->getMessage());
-}
  ?>
 
 <head>

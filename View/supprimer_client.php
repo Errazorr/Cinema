@@ -22,6 +22,7 @@
 <body>
 	  <!-- Test de connexion à la bdd -->
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -51,6 +52,7 @@
 											$req = $bdd->query('SELECT nom FROM compte WHERE role="Client"');
 									    $donnees= $req->fetchall();
 
+											//Liste déroulante avec le nom de chaque client
 											foreach ($donnees as $value) {
 												//affiche les valeurs //
 												echo '<option>'.$value["nom"].'</option>';
@@ -68,6 +70,7 @@
 											$req = $bdd->query('SELECT prenom FROM compte WHERE role="Client"');
 									    $donnees= $req->fetchall();
 
+											//Liste déroulante avec le prénom de chaque client
 											foreach ($donnees as $value) {
 												echo '<option>'.$value["prenom"].'</option>';
 											}

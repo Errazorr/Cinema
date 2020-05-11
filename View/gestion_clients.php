@@ -34,6 +34,7 @@
 
 <!-- Test de connexion à la bdd -->
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -100,10 +101,11 @@
 						<table>
 							<tbody>
 								<?php
-								// Sélection du role //
+								//Selection de toutes les données de la table compte où le role est client
 								$req = $bdd->query('SELECT * FROM compte WHERE role="client"');
 								$donnees= $req->fetchall();
 
+								//Tableau avec toutes les données trouvées précédemment
 								foreach ($donnees as $value) {
 									// Affichage des informations //
 									echo '<tr class="row100 body">
@@ -114,9 +116,6 @@
 												</tr>';
 								}
 								?>
-
-
-
 
 							</tbody>
 						</table>
