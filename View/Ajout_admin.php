@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Inscription</h2>
+                        <h2 class="form-title">Ajout d'un administrateur</h2>
                         <form method="POST" action="../Traitement/Ajout_admin.php" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
