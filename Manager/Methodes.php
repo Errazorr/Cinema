@@ -288,7 +288,7 @@ public function modif_reservation(reservation $modif_reservation){
   $req = $bdd->prepare('UPDATE reservation SET num_salle=?, date_prevue=? WHERE reservation=?');
   $req->execute(array($salle[0], $modif_reservation->getDate(), $modif_reservation->getReservation()));
 
-  $reserv = $_SESSION['nom']."/".$modif_reservation->getFilm()."/".$modif_reservation->getDate();
+  $reserv = $nom."/".$modif_reservation->getFilm()."/".$modif_reservation->getDate();
 
   $req = $bdd->prepare('UPDATE reservation SET reservation=? WHERE num_salle=? AND date_prevue=?');
   $req->execute(array($reserv, $salle[0], $modif_reservation->getDate()));
