@@ -232,8 +232,6 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     header('Location: ../View/compte_client.php');
 
   }
-<<<<<<< HEAD
-=======
 
 
   public function modification($modification){
@@ -339,5 +337,4 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     $req->execute(array($suppr_client->getNom(), $suppr_client->getPrenom()));
     header('Location: ../View/gestion_clients.php');
   }
->>>>>>> b0bc8918d35298a01686c916cb9614aca89b31ad
 }
