@@ -15,7 +15,7 @@ catch (Exception $e){
 $req = $bdd->prepare('SELECT id FROM compte WHERE nom=?');
 $req->execute(array($_POST['client']));
 $id= $req->fetch();
-$_SESSION['id'] = $id;
+$_SESSION['id'] = $id[0];
 //Sélection de l'ensemble des informations de la table compte en fonction de l'id //
 $rec = $bdd->prepare('SELECT * FROM compte WHERE id=?');
 $rec->execute(array($id[0]));

@@ -253,4 +253,109 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     // Redirection en fonction de l'execution de la requête //
     header('Location: ../View/compte_admin.php');
   }
+
+
+  public function modification($modification){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+
+  $rec = $bdd->prepare('UPDATE compte SET mail=?, tel=?, mdp=? WHERE nom=? AND prenom=?');
+  $a = $rec->execute(array($modification->getMail(), $modification->getTel(), $modification->getMdp(), $_SESSION['nom'], $_SESSION['prenom']));
+  header('Location: ../View/compte_client.php');
+}
+
+
+public function modif_reservation(reservation $modif_reservation){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+
+  $req = $bdd->prepare('SELECT num FROM salle WHERE film=?');
+  $req->execute(array($modif_reservation->getFilm()));
+  $salle= $req->fetch();
+
+  $req = $bdd->prepare('UPDATE reservation SET num_salle=?, date_prevue=? WHERE reservation=?');
+  $req->execute(array($salle[0], $modif_reservation->getDate(), $modif_reservation->getReservation()));
+
+  $reserv = $_SESSION['nom']."/".$modif_reservation->getFilm()."/".$modif_reservation->getDate();
+
+  $req = $bdd->prepare('UPDATE reservation SET reservation=? WHERE num_salle=? AND date_prevue=?');
+  $req->execute(array($reserv, $salle[0], $modif_reservation->getDate()));
+  header('Location: ../View/voir_reservation.php');
+}
+
+
+
+public function ajout_film($ajout){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+  $req = $bdd->prepare('SELECT * FROM salle WHERE film=?');
+  $req->execute(array($ajout->getFilm()));
+  $donnees = $req->fetch();
+
+  if ($donnees) {
+    echo '<body onLoad="alert(\'Film déjà enregistré\')">';
+
+    echo '<meta http-equiv="refresh" content="0;URL=../View/ajout_film.php">';
+  }
+
+  else {
+    $rec = $bdd->prepare('INSERT INTO salle (num, film, description, 3D, nb_places, places_restantes) VALUES (?,?,?,?,?,?)');
+    $a = $rec->execute(array($ajout->getNum_salle(), $ajout->getFilm(), $ajout->getDescription(), $ajout->getDimension(), $ajout->getPlaces(), $ajout->getPlaces()));
+    header('Location: ../View/compte_admin.php');
+  }
+}
+
+
+public function suppr_reservation(reservation $suppr_reservation){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+
+  $req = $bdd->prepare('DELETE FROM reservation WHERE reservation=?');
+  $req->execute(array($suppr_reservation->getReservation()));
+  header('Location: ../View/voir_reservation.php');
+}
+
+
+public function modif_client(user $modification_client){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+
+  $req = $bdd->prepare('UPDATE compte SET nom=?, prenom=?, mail=?, tel=? WHERE id=?');
+  $req->execute(array($modification_client->getNom(), $modification_client->getPrenom(), $modification_client->getMail(), $modification_client->getTel(), $_SESSION['id']));
+  header('Location: ../View/gestion_clients.php');
+}
+
+
+public function suppr_client(user $suppr_client){
+  try{
+    $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+  }
+  catch (Exception $e){
+    die('Erreur:'.$e->getMessage());
+  }
+
+  $req = $bdd->prepare('DELETE FROM compte WHERE nom=? AND prenom=?');
+  $req->execute(array($suppr_client->getNom(), $suppr_client->getPrenom()));
+  header('Location: ../View/gestion_clients.php');
+}
 }

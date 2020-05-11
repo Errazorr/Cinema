@@ -68,6 +68,18 @@ class reservation extends user{
     $this->_reservation = $reservation;
   }
 
+  public function setDescription ($description){
+    $this->_description = $description;
+  }
+
+  public function setPlaces ($places){
+    $this->_places = $places;
+  }
+
+  public function setDimension ($dimension){
+    $this->_dimension = $dimension;
+  }
+
 
   public function getDate(){return $this->_date;}
   public function getPers(){return $this->_pers;}
