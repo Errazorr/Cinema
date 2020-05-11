@@ -68,22 +68,7 @@ class reservation extends user{
     $this->_reservation = $reservation;
   }
 
-<<<<<<< HEAD
-// Déclaration de l'ensemble des getteur //
-=======
-  public function setDescription ($description){
-    $this->_description = $description;
-  }
 
-  public function setPlaces ($places){
-    $this->_places = $places;
-  }
-
-  public function setDimension ($dimension){
-    $this->_dimension = $dimension;
-  }
-
->>>>>>> b0bc8918d35298a01686c916cb9614aca89b31ad
   public function getDate(){return $this->_date;}
   public function getPers(){return $this->_pers;}
   public function getFilm(){return $this->_film;}
@@ -97,5 +82,5 @@ class reservation extends user{
   public function getPlaces(){return $this->_places;}
   public function getDimension(){return $this->_dimension;}
 }
-
+// Déclaration de l'ensemble des getteur //
 ?>
