@@ -29,6 +29,7 @@
 
 <body>
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -53,11 +54,12 @@
 									<select class="form-control" name="reservation" placeholder="Choisissez un film">
 
 											<?php
-											$req = $bdd->query('SELECT film, nom, date_prevue FROM reservation INNER JOIN salle ON num_salle=num');
+											$req = $bdd->query('SELECT reservation FROM reservation');
 									    $donnees= $req->fetchall();
 
+											//Liste déroulante avec chaque réservation
 											foreach ($donnees as $value) {
-												echo '<option>'.$value["nom"]."/".$value["film"]."/".$value['date_prevue'].'</option>';
+												echo '<option>'.$value["reservation"].'</option>';
 											}
 											?>
 

@@ -29,6 +29,7 @@
 
 <body>
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -43,7 +44,7 @@
 					<div class="col-md-7 col-md-push-5">
 						<div class="booking-cta">
 							<h1>Ajout d'un film</h1>
-							
+
 						</div>
 					</div>
 					<div class="col-md-4 col-md-pull-7">

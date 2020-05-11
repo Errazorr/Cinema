@@ -29,6 +29,7 @@
 
 <body>
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -53,6 +54,7 @@
 									<select class="form-control" name="client" placeholder="Choisissez un film">
 
 											<?php
+											//Liste déroulante avec le nom de chaque client
 											$req = $bdd->query('SELECT nom FROM compte WHERE role="Client"');
 									    $donnees= $req->fetchall();
 

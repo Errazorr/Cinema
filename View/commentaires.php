@@ -29,6 +29,7 @@
 
 <body>
 	<?php
+	//Connexion à la bdd
 	try{
 		$bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
 	}
@@ -55,6 +56,7 @@
 									<select class="form-control" name="film" placeholder="Choisissez un film">
 
 											<?php
+											//Liste déroulante avec le nom de chaque film
 											$req = $bdd->query('SELECT film FROM salle');
 									    $donnees= $req->fetchall();
 

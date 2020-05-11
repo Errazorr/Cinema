@@ -49,7 +49,9 @@ session_start();
                       <ul>
 
                         <?php
+                        //Si il y a une session ouverte
                         if (isset($_SESSION['mail'])){
+                          //Si la personne est un client
                           if ($_SESSION['role'] == "client") { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
                             <li><a href="View/reservation.php">Réservation</a></li>
@@ -63,7 +65,7 @@ session_start();
                             <li><a href="View/compte_client.php">Mon compte</a></li>
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                           <?php  }
-
+                            //Sinon c'est donc un admin
                            else { ?>
                             <li class="active"><a href="index.php">Accueil</a></li>
                             <li><a href="View/Nouveaute.php">Film & évènement</a>
@@ -77,6 +79,7 @@ session_start();
                             <li><a href="Traitement/session_destroy.php">Déconnexion</a></li>
                         <?php }
                       }
+                      //Sinon il n'y a pas de sessions ouverte
                       else{ ?>
                           <li class="active"><a href="index.php">Accueil</a></li>
                           <li><a href="View/Nouveaute.php">Film & évènement</a>
