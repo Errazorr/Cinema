@@ -237,4 +237,20 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
     header('Location: ../View/compte_client.php');
 
   }
+
+  public function ajout_film($ajout){
+    try{
+      // Test de connexion à la bdd //
+      $bdd= new PDO('mysql:host=localhost;dbname=cine; charset=utf8','root','');
+    }
+    catch (Exception $e){
+      die('Erreur:'.$e->getMessage());
+    }
+
+    //Execution de la requête //
+    $rec = $bdd->prepare('INSERT INTO salle (num, film, description, 3D, nb_places, places_restantes) VALUES (?,?,?,?,?,?)');
+    $a = $rec->execute(array($ajout->getNum_salle(), $ajout->getFilm(), $ajout->getDescription(), $ajout->getDimension(), $ajout->getPlaces(), $ajout->getPlaces()));
+    // Redirection en fonction de l'execution de la requête //
+    header('Location: ../View/compte_admin.php');
+  }
 }
