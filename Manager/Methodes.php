@@ -172,7 +172,7 @@ echo '<meta http-equiv="refresh" content="0;URL=../View/contact.php">';
           $places_rest = (int)$places_rest['places_restantes'] - $nb_pers;
           $rec = $bdd->prepare('UPDATE salle SET places_restantes=? WHERE film=?');
           $a = $rec->execute(array($places_rest, $reservation->getFilm()));
-          //header('Location: ../View/payement.php');
+          header('Location: ../View/payement.php');
         }
 
         else {
