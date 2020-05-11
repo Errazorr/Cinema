@@ -61,7 +61,7 @@ $role= $req->fetch();
                         <!-- Changement de la navbar en fonction du role -->
                         <?php
                         if (isset($_SESSION['mail'])){
-                          if ($role == "client") { ?>
+                            if ($_SESSION['role'] == "client") { ?>
                             <li class="active"><a href="../index.php">Accueil</a></li>
                             <li><a href="Nouveaute.php">Film & évènement</a>
                                 <ul class="dropdown">
